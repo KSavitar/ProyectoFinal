@@ -393,6 +393,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloMadera (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
@@ -468,6 +472,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2b40728dc5c3d1a4694bb344efd07a62, type: 3}
       propertyPath: m_Name
       value: EscaleraasUVS
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2b40728dc5c3d1a4694bb344efd07a62, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -551,6 +559,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
       propertyPath: m_Name
       value: SueloMadera (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -709,6 +721,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -922,8 +938,7 @@ Transform:
   - {fileID: 81714462}
   - {fileID: 1640214820}
   - {fileID: 1192819251}
-  - {fileID: 1970752653}
-  - {fileID: 1615735745}
+  - {fileID: 952687536}
   - {fileID: 520839600}
   - {fileID: 445308644}
   - {fileID: 474909718}
@@ -1367,6 +1382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloMadera (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
@@ -1530,6 +1549,57 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 233833c957bf1a04380c1d377d0ed4c6, type: 3}
   m_PrefabInstance: {fileID: 1360300436}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &86322604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+  m_PrefabInstance: {fileID: 1137268531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &86322605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+  m_PrefabInstance: {fileID: 1137268531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &86322606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86322604}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f732a7e8b73fdfb459f7ffdb246e768b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  values: {fileID: 147476071}
+  rotSpeed: 1
+  codigo: {fileID: 1615735749}
+--- !u!65 &86322607
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86322604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23195457, y: 0.13629279, z: 0.2673385}
+  m_Center: {x: 0, y: -0.0130244065, z: 0.017707342}
+--- !u!65 &86322610
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86322604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10668963, y: 0.11024405, z: 0.14053868}
+  m_Center: {x: -0.001511503, y: -0.00000012033797, z: -0.23974723}
 --- !u!1001 &88850839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1790,6 +1860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -1934,6 +2008,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -2294,6 +2372,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -3323,6 +3405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -3463,6 +3549,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e6a9c9848476e5f47a04e65f01752909, type: 3}
   m_PrefabInstance: {fileID: 145132450}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &147476070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147476072}
+  - component: {fileID: 147476071}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &147476071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147476070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f83d6c80d190f4dbcbcf7c6dcc9b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotSpeed: 1
+  canMove: 1
+--- !u!4 &147476072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147476070}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.5, y: -14, z: -189.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &148984522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3594,6 +3726,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -5545,6 +5681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -6504,6 +6644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -7258,6 +7402,68 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 233833c957bf1a04380c1d377d0ed4c6, type: 3}
   m_PrefabInstance: {fileID: 502375865}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &379624222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379624223}
+  - component: {fileID: 379624224}
+  - component: {fileID: 379624225}
+  m_Layer: 0
+  m_Name: DetectarZonaB
+  m_TagString: B
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &379624223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379624222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.315, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1615735745}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &379624224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379624222}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07498659, y: 0.03436309, z: 0.1176913}
+  m_Center: {x: 0.32851374, y: -0.04962719, z: 0.17330317}
+--- !u!54 &379624225
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379624222}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &379780201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7390,6 +7596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -7483,6 +7693,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -8455,6 +8669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloRoto
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5fcc0710f0f26340ba73116c47f8297, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d5fcc0710f0f26340ba73116c47f8297, type: 3}
@@ -8606,6 +8824,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -9462,6 +9684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloMadera (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
@@ -9484,27 +9710,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bf48a75f3b3d61c48b9e518de475a1d7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4066
+      value: 2.5255504
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bf48a75f3b3d61c48b9e518de475a1d7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4066
+      value: 2.5255504
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bf48a75f3b3d61c48b9e518de475a1d7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4066
+      value: 2.5255504
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bf48a75f3b3d61c48b9e518de475a1d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.271742
+      value: 5.283
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bf48a75f3b3d61c48b9e518de475a1d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2540274
+      value: 3.1038272
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bf48a75f3b3d61c48b9e518de475a1d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.2972832
+      value: -2.2973
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bf48a75f3b3d61c48b9e518de475a1d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10355,6 +10581,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -11606,6 +11836,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -11681,6 +11915,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -12179,7 +12417,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &618546946
 MonoBehaviour:
@@ -12333,6 +12571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -12396,6 +12638,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
       propertyPath: m_Name
       value: SueloMadera (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -12542,6 +12788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -12669,6 +12919,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
       propertyPath: m_Name
       value: SueloMadera (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -13008,11 +13262,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffac16e36e7e1e64ab25bf9147a722de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.889027
+      value: 6.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffac16e36e7e1e64ab25bf9147a722de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.4003124
+      value: -3.21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffac16e36e7e1e64ab25bf9147a722de, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13197,6 +13451,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -13715,6 +13973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -13922,6 +14184,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -14543,6 +14809,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -15486,6 +15756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -15852,6 +16126,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bfd96408525e2fe47b14558a336d1568, type: 3}
   m_PrefabInstance: {fileID: 769272780}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &773792048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773792049}
+  m_Layer: 0
+  m_Name: GroundDetect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773792049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773792048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1751843536}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &774463520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15919,6 +16224,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -16189,19 +16498,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 35bb10363b60947439b53b5d72f514c6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35bb10363b60947439b53b5d72f514c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.14
+      value: -19.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35bb10363b60947439b53b5d72f514c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.02
+      value: 3.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35bb10363b60947439b53b5d72f514c6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -81.21
+      value: -16.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35bb10363b60947439b53b5d72f514c6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16240,7 +16549,13 @@ PrefabInstance:
       value: Lupo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 35bb10363b60947439b53b5d72f514c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1241762121}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 35bb10363b60947439b53b5d72f514c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 773792049}
   m_SourcePrefab: {fileID: 100100000, guid: 35bb10363b60947439b53b5d72f514c6, type: 3}
 --- !u!1001 &796547531
 PrefabInstance:
@@ -16919,6 +17234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -17041,7 +17360,7 @@ Transform:
   - {fileID: 1186931044}
   - {fileID: 592929464}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &830898628
 PrefabInstance:
@@ -17238,6 +17557,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -17447,6 +17770,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -18336,6 +18663,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -19398,6 +19729,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fb3cd52add2efed49806071384bc8338, type: 3}
   m_PrefabInstance: {fileID: 938728144}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &941665793
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 1615735745}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7060114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7060114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7060114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3262869
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.06141962
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.06991299
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_Name
+      value: RuletaCajaFuerte (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_TagString
+      value: Cerrojo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
 --- !u!1001 &945351207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19602,6 +20012,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8118e641139654d46a32dc3f1b13060f, type: 3}
   m_PrefabInstance: {fileID: 951188499}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &952687535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 952687536}
+  - component: {fileID: 952687537}
+  m_Layer: 0
+  m_Name: PuertaCajaParen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &952687536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952687535}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 4.666, y: 3.12, z: -3.681}
+  m_LocalScale: {x: 2.5431602, y: 2.5431602, z: 2.5431602}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1615735745}
+  m_Father: {fileID: 48817377}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+--- !u!95 &952687537
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952687535}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db2a426f8f168354a9d323fe934ce474, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &955601466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19669,6 +20132,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -20658,8 +21125,111 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3792921, y: 0.60512376, z: 1.4404379}
-  m_Center: {x: -0.00000035762787, y: 0.00000025331974, z: 0.000000059604645}
+  m_Size: {x: 1.3792921, y: 0.5430987, z: 1.4404379}
+  m_Center: {x: -0.0000003776105, y: 0.03101282, z: 0.00000004720131}
+--- !u!1 &1009552817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1009552821}
+  - component: {fileID: 1009552820}
+  - component: {fileID: 1009552819}
+  - component: {fileID: 1009552818}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1009552818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009552817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1009552819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009552817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1009552820
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009552817}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1009552821
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009552817}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1347616985}
+  - {fileID: 1171397080}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1001 &1015780208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21479,6 +22049,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -22635,6 +23209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -22838,6 +23416,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -23107,6 +23689,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e6a9c9848476e5f47a04e65f01752909, type: 3}
   m_PrefabInstance: {fileID: 1132677159}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1137268531
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 1615735745}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7060114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7060114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7060114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0007077108
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.06141962
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.06991299
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_Name
+      value: RuletaCajaFuerte (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_TagString
+      value: Cerrojo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
 --- !u!1001 &1138726494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23525,6 +24186,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fb3cd52add2efed49806071384bc8338, type: 3}
   m_PrefabInstance: {fileID: 1169824493}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1171397079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1171397080}
+  - component: {fileID: 1171397082}
+  - component: {fileID: 1171397081}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1171397080
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171397079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1855528259}
+  m_Father: {fileID: 1009552821}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 33}
+  m_SizeDelta: {x: 674.501, y: 123.458984}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1171397081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171397079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1171397082
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171397079}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1173466205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23592,6 +24330,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -23952,6 +24694,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -24327,6 +25073,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -24885,6 +25635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -24969,6 +25723,7 @@ GameObject:
   - component: {fileID: 1241762120}
   - component: {fileID: 1241762119}
   - component: {fileID: 1241762122}
+  - component: {fileID: 1241762123}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -25034,14 +25789,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241762118}
-  m_LocalRotation: {x: -0, y: 0.29497704, z: -0, w: 0.9555044}
-  m_LocalPosition: {x: 0, y: 3.15, z: -10}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.49, z: -0.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 34.312, z: 0}
+  m_Father: {fileID: 1751843536}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1241762122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25075,6 +25830,29 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1241762123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241762118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ba8871605e6654391014fb4f1d3ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1751843536}
+  rotSpeed: 4
+  minRot: -50
+  maxRot: 50
+  values: {fileID: 147476071}
+  mask:
+    serializedVersion: 2
+    m_Bits: 1792
+  distance: 8
+  panel: {fileID: 1171397079}
+  cursor: {fileID: 1347616984}
 --- !u!1001 &1252808809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25943,6 +26721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloMadera (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
@@ -26082,6 +26864,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -26274,6 +27060,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
       propertyPath: m_Name
       value: SueloMadera (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -27262,6 +28052,144 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.55159, y: 2.50512, z: 4.383919}
   m_Center: {x: 0.00000035762787, y: 0.0000019669533, z: -0.00000023841858}
+--- !u!1 &1346087636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346087637}
+  - component: {fileID: 1346087638}
+  - component: {fileID: 1346087639}
+  m_Layer: 0
+  m_Name: DetectarZonac
+  m_TagString: C
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1346087637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346087636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.65, y: 0, z: -0.021}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1615735745}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1346087638
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346087636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07498659, y: 0.03436309, z: 0.1176913}
+  m_Center: {x: 0.32851374, y: -0.04962719, z: 0.17330317}
+--- !u!54 &1346087639
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346087636}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!1 &1347616984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1347616985}
+  - component: {fileID: 1347616987}
+  - component: {fileID: 1347616986}
+  m_Layer: 5
+  m_Name: Cursor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1347616985
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347616984}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1009552821}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 15, y: 15}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1347616986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347616984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1347616987
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347616984}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1355131814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27461,6 +28389,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -28332,6 +29264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -28616,6 +29552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -28691,6 +29631,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -30690,6 +31634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloMadera (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
@@ -30921,6 +31869,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bfd96408525e2fe47b14558a336d1568, type: 3}
   m_PrefabInstance: {fileID: 1496900789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1498767680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498767681}
+  - component: {fileID: 1498767682}
+  - component: {fileID: 1498767683}
+  m_Layer: 0
+  m_Name: DetectarZonaA
+  m_TagString: A
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1498767681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498767680}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1615735745}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1498767682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498767680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07498659, y: 0.03436309, z: 0.1176913}
+  m_Center: {x: 0.32851374, y: -0.04962719, z: 0.17330317}
+--- !u!54 &1498767683
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498767680}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1501580940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31134,6 +32144,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -31587,6 +32601,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -32158,15 +33176,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4031afac1f876ec4cbc7ac1de6a50a5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.2962112
+      value: 5.296
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4031afac1f876ec4cbc7ac1de6a50a5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9160273
+      value: 2.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4031afac1f876ec4cbc7ac1de6a50a5a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.762313
+      value: -1.194
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4031afac1f876ec4cbc7ac1de6a50a5a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32215,7 +33233,7 @@ GameObject:
   - component: {fileID: 1599743282}
   - component: {fileID: 1599743281}
   - component: {fileID: 1599743280}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32780,7 +33798,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 2
-    m_TransformParent: {fileID: 48817377}
+    m_TransformParent: {fileID: 952687536}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_RootOrder
@@ -32788,43 +33806,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4164077
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4164077
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4164077
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.96
+      value: 0.5468786
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2630272
+      value: 0.022531059
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.2933125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -32843,7 +33861,25 @@ PrefabInstance:
       value: PuertaCajaFuerte
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1970752653}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 86322605}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1829054195}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1498767681}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 379624223}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1346087637}
   m_SourcePrefab: {fileID: 100100000, guid: 9680869bc99222346bd7d26684a8cdef, type: 3}
 --- !u!4 &1615735745 stripped
 Transform:
@@ -32863,6 +33899,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0721214, y: 0.058571957, z: 1.07721}
   m_Center: {x: 0.0000003874302, y: -0.00000017881393, z: 0.000000029802322}
+--- !u!114 &1615735749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859705024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075b7024761376e4987e620a4238ec6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: 0
+  b: 0
+  c: 0
+  finalNum: 
+  codeNum: 958
+  A: {fileID: 2138238135}
+  B: {fileID: 86322606}
+  C: {fileID: 1829054196}
+  values: {fileID: 147476071}
+  anim: {fileID: 952687537}
 --- !u!1001 &1617958694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32994,6 +34052,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
       propertyPath: m_Name
       value: SueloMadera (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -33561,6 +34623,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -34433,6 +35499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -34845,6 +35915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -35161,6 +36235,74 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.57839394, y: 0.93664217, z: 0.22323567}
   m_Center: {x: -0.0000038444996, y: -0.00000014901161, z: 0.00000086054206}
+--- !u!1 &1751843533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 35bb10363b60947439b53b5d72f514c6, type: 3}
+  m_PrefabInstance: {fileID: 792677673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1751843536 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 35bb10363b60947439b53b5d72f514c6, type: 3}
+  m_PrefabInstance: {fileID: 792677673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1751843537
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751843533}
+  m_Material: {fileID: 13400000, guid: deca88ae44ad549488b88a9feeb07839, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5483284
+  m_Height: 4.905507
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.5077558, z: -0.64434433}
+--- !u!54 &1751843538
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751843533}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
+--- !u!114 &1751843539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751843533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee66c29698cc1ce42ad3871bb8f85e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1751843538}
+  speed: 12
+  speedRotation: 4
+  jumpForce: 8
+  gravity: 10
+  isGrounded: 0
+  haveRest: 0
+  groundPoint: {fileID: 773792049}
+  groundRadius: 0.5
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 128
+  minRot: 50
+  maxRot: 50
+  values: {fileID: 147476071}
+  pipes: 0
 --- !u!1001 &1769016428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35432,6 +36574,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -36174,6 +37320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -36182,6 +37332,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
   m_PrefabInstance: {fileID: 1827191035}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1829054194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+  m_PrefabInstance: {fileID: 941665793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1829054195 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+  m_PrefabInstance: {fileID: 941665793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1829054196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829054194}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f732a7e8b73fdfb459f7ffdb246e768b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  values: {fileID: 147476071}
+  rotSpeed: 1
+  codigo: {fileID: 1615735749}
+--- !u!65 &1829054197
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829054194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23195457, y: 0.13629279, z: 0.2673385}
+  m_Center: {x: 0, y: -0.0130244065, z: 0.017707342}
+--- !u!65 &1829054200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829054194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09451467, y: 0.11024405, z: 0.07680467}
+  m_Center: {x: 0.1655403, y: -0.00000012033797, z: -0.18221809}
 --- !u!1001 &1829681095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36249,6 +37450,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -36636,6 +37841,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -37034,6 +38243,141 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e6a9c9848476e5f47a04e65f01752909, type: 3}
   m_PrefabInstance: {fileID: 1854080570}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1855528258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1855528259}
+  - component: {fileID: 1855528261}
+  - component: {fileID: 1855528260}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1855528259
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855528258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1171397080}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -55, y: 38}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1855528260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855528258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Pulsa E para interactuar
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50.67
+  m_fontSizeBase: 50.67
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -110.04285, y: 0, z: -562.0309, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1855528261
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855528258}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1855693052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37299,6 +38643,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
       propertyPath: m_Name
       value: SueloMadera (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -37609,6 +38957,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -38589,6 +39941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -39341,6 +40697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -39764,39 +41124,51 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 2
-    m_TransformParent: {fileID: 48817377}
+    m_TransformParent: {fileID: 1615735745}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
       propertyPath: m_RootOrder
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7060114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7060114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7060114
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.873
+      value: 0.32251212
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1640272
+      value: -0.06141962
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.3043122
+      value: -0.06991299
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -39813,6 +41185,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
       propertyPath: m_Name
       value: RuletaCajaFuerte
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1926f134b8a10f741b4677396d534b6a, type: 3}
+      propertyPath: m_TagString
+      value: Cerrojo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -39953,6 +41333,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -40158,6 +41542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloMadera (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
@@ -40341,6 +41729,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
       propertyPath: m_Name
       value: SueloMadera (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c884cfff2997764ebe9d26c69e246af, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -40712,6 +42104,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -42542,6 +43938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SueloSala2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
@@ -42944,6 +44344,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e38dfaf9b6a1b6c47b3232aa8a111253, type: 3}
   m_PrefabInstance: {fileID: 2108726064}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2109539632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2109539635}
+  - component: {fileID: 2109539634}
+  - component: {fileID: 2109539633}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2109539633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109539632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &2109539634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109539632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &2109539635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109539632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2111850930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43075,6 +44542,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
       propertyPath: m_Name
       value: SueloSala2 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e71d59f20163f24fa436cd9c8678380, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -43286,11 +44757,39 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138238133}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.23195457, y: 0.11024406, z: 0.23192407}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.23195457, y: 0.13629279, z: 0.2673385}
+  m_Center: {x: 0, y: -0.0130244065, z: 0.017707342}
+--- !u!114 &2138238135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138238133}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f732a7e8b73fdfb459f7ffdb246e768b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  values: {fileID: 147476071}
+  rotSpeed: 1
+  codigo: {fileID: 1615735749}
+--- !u!65 &2138238138
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138238133}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14977416, y: 0.11024405, z: 0.059561104}
+  m_Center: {x: 0.22967839, y: -0.00000012033797, z: 0.00838933}
 --- !u!1001 &2140891452
 PrefabInstance:
   m_ObjectHideFlags: 0

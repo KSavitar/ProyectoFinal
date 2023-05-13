@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class DetectorDeCodigo : MonoBehaviour
 {
-    public int a = 1, b = 2, c = 0;
-    public string finalNum, codeNum;
+    public int a, b, c;
+    public string finalNum;
+    public string codeNum = "958";
+
+    public CajaFuerte A, B, C;
+    public ValoresOpciones values;
+    [SerializeField] Animator anim;
+
     void Start()
     {
 
@@ -17,28 +23,18 @@ public class DetectorDeCodigo : MonoBehaviour
         finalNum = a.ToString() + b.ToString() + c.ToString();
         if (finalNum == codeNum)
         {
-            print("Correcto");
+            anim.SetBool("Abierta", true);
+            A.enabled = false;
+            B.enabled = false;
+            C.enabled = false;
+            values.canMove = true;
+            this.enabled = false;
+            
+            
         }
 
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        print("a");
-        if (other.CompareTag("Correct"))
-        {
-            a = 9;
-        }
-
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        print("a");
-        if (other.CompareTag("Correct"))
-        {
-            a = 0;
-        }
-
-    }
+    
 }

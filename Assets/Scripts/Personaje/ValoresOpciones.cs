@@ -6,7 +6,6 @@ public class ValoresOpciones : MonoBehaviour
 {
     [Range(1.0f, 10f)]
     public float RotSpeed;
-
     public bool canMove = true;
 
     void Start()

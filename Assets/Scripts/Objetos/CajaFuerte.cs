@@ -12,6 +12,8 @@ public class CajaFuerte : MonoBehaviour
     private Vector3 PressPoint;
     private Quaternion StartRotation;
 
+    public DetectorDeCodigo codigo;
+
 
     private void Start()
     {
@@ -32,7 +34,47 @@ public class CajaFuerte : MonoBehaviour
         else if (Input.GetMouseButton(0))
         {
             float CurrentDistanceBetweenMousePositions = (Input.mousePosition - PressPoint).x;
-            transform.rotation = StartRotation * Quaternion.Euler(Vector3.left * (CurrentDistanceBetweenMousePositions / SceneWidth * 360));
+            transform.rotation = StartRotation * Quaternion.Euler(Vector3.down * (CurrentDistanceBetweenMousePositions / SceneWidth * 360));
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.CompareTag("A"))
+        {
+            print(codigo.a);
+            codigo.a = 9;
+        }
+        if (other.CompareTag("B"))
+        {
+            print(codigo.b);
+
+            codigo.b = 5;
+        }
+        if (other.CompareTag("C"))
+        {
+            print(codigo.c);
+
+            codigo.c = 8;
+        }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+
+        if (other.CompareTag("A"))
+        {
+            codigo.a = 0;
+        }
+        if (other.CompareTag("B"))
+        {
+            codigo.b = 0;
+        }
+        if (other.CompareTag("C"))
+        {
+            codigo.c = 0;
         }
 
     }

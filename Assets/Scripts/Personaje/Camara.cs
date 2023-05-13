@@ -38,10 +38,10 @@ public class Camara : MonoBehaviour
 
         if (hit.collider.tag == "Cerrojo")
         {
-                panel.SetActive(true);
+            panel.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                    panel.SetActive(false);
+                    
                     hit.collider.transform.GetComponent<CajaFuerte>().enabled = true;
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
@@ -49,7 +49,7 @@ public class Camara : MonoBehaviour
                     hit.collider.transform.GetComponent<CajaFuerte>().enabled = false;
 
                     values.canMove = true;
-                    panel.SetActive(false);
+                    
 
             }
 
@@ -87,6 +87,10 @@ public class Camara : MonoBehaviour
 
 
 
+        }
+        else
+        {
+                panel.SetActive(false);
         }
     }
 
