@@ -28,6 +28,8 @@ public class Camara : MonoBehaviour
 
 	[SerializeField] int tuboCurva, tuboCruz, tuboPlano;
 
+	[SerializeField] GameObject tuboCruzPrefab, tuboPlanoPrefab, tuboCurvoPrefab;
+
 	[SerializeField] InventoryManager inventoryManager;
 	[SerializeField] ItemsScript llaveSO, martilloSO, tuboCurvaSO, tuboCruzSO, tuboRectoSO; //SO significa ScriptableObject
 
@@ -37,9 +39,10 @@ public class Camara : MonoBehaviour
 
 		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distance, mask))
 		{
+			panel.SetActive(true);
 			if (hit.collider.tag == "Cerrojo")
 			{
-				panel.SetActive(true);
+				
 				if (Input.GetKeyDown(KeyCode.E))
 				{
 
@@ -58,7 +61,7 @@ public class Camara : MonoBehaviour
 				{
 					Destroy(hit.collider.gameObject);
 					martillo = true;
-					AddToInventory(martilloSO);
+					//AddToInventory(martilloSO);
 				}
 			}
 			else if (hit.collider.tag == "Tablon")
@@ -69,7 +72,7 @@ public class Camara : MonoBehaviour
 					{
 						Destroy(hit.collider.gameObject);
 						martillo = false;
-						inventoryManager.RemoveItemInSlot(ItemType.Martillo);
+						//inventoryManager.RemoveItemInSlot(ItemType.Martillo);
 					}
 				}
 			}
@@ -79,7 +82,7 @@ public class Camara : MonoBehaviour
 				{
 					Destroy(hit.collider.gameObject);
 					llave = true;
-					AddToInventory(llaveSO);
+					//AddToInventory(llaveSO);
 				}
 			}
 			else if (hit.collider.tag == "Puerta1")
@@ -127,16 +130,16 @@ public class Camara : MonoBehaviour
 				{
 					tuboCurva += 1;
 					Destroy(hit.collider.gameObject);
-					AddToInventory(tuboCurvaSO);
+					//AddToInventory(tuboCurvaSO);
 				}
 			}
-			else if (hit.collider.tag == "TuberiaCruz")
+			else if (hit.collider.tag == "TuboCruz")
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
 					tuboCruz += 1;
 					Destroy(hit.collider.gameObject);
-					AddToInventory(tuboCruzSO);
+					//AddToInventory(tuboCruzSO);
 
 				}
 			}
@@ -146,13 +149,46 @@ public class Camara : MonoBehaviour
 				{
 					tuboPlano += 1;
 					Destroy(hit.collider.gameObject);
-					AddToInventory(tuboRectoSO);
+					//AddToInventory(tuboRectoSO);
 				}
 			}
-			else if (hit.collider.tag == null)
+			else if(hit.collider.tag == "ZonaTuboCruz")
+            {
+				if(Input.GetKeyDown(KeyCode.E))
+                {
+					if(tuboCruz > 0)
+                    {
+						Instantiate(tuboCruzPrefab, hit.transform.position, new Quaternion(90,180,180,0));
+						tuboCruz -= 1;
+						Destroy(hit.collider.gameObject);
+					}
+                }
+            }
+			else if (hit.collider.tag == "ZonaTuboCurva")
 			{
-				panel.SetActive(false);
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					if (tuboCurva > 0)
+					{
+						Instantiate(tuboCurvoPrefab, hit.transform.position, new Quaternion(0,-90,90,0));
+						tuboCurva -= 1;
+						Destroy(hit.collider.gameObject);
+					}
+				}
 			}
+			else if (hit.collider.tag == "ZonaTuboPlano")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					if (tuboPlano > 0)
+					{
+						Instantiate(tuboPlanoPrefab, hit.transform.position, new Quaternion(0,90,-90,0));
+						tuboPlano -= 1;
+						Destroy(hit.collider.gameObject);
+					}
+				}
+			}
+			
 
 			/*switch (hit.collider.tag)
 			{
@@ -192,6 +228,10 @@ public class Camara : MonoBehaviour
 					break;
 			}*/
 		}
+		else
+		{
+			panel.SetActive(false);
+		}
 	}
 
 
@@ -216,7 +256,7 @@ public class Camara : MonoBehaviour
 
 	private void LateUpdate()
 	{
-		/*if (values.canMove)
+		if (values.canMove)
 		{
 			Cursor.visible = false;
 			Cursor.lockState = CursorLockMode.Locked;
@@ -238,7 +278,7 @@ public class Camara : MonoBehaviour
 			Cursor.lockState = CursorLockMode.None;
 			cursor.SetActive(false);
 
-		}*/
+		}
 
 
 

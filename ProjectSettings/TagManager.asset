@@ -13,6 +13,13 @@ TagManager:
   - Llave
   - Puerta1
   - CajonSala1
+  - Puerta2
+  - TuboCruz
+  - TuboCurva
+  - TuboPlano
+  - ZonaTuboCruz
+  - ZonaTuboPlano
+  - ZonaTuboCurva
   layers:
   - Default
   - TransparentFX
@@ -26,7 +33,7 @@ TagManager:
   - Martillo
   - LLave
   - Tablon
-  - 
+  - Interactable
   - 
   - 
   - 
