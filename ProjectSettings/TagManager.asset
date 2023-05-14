@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - B
+  - C
+  - A
+  - Cerrojo
+  - Martillo
+  - Tablon
+  - Llave
+  - Puerta1
+  - CajonSala1
   layers:
   - Default
   - TransparentFX
@@ -16,7 +25,7 @@ TagManager:
   - Cerrojo
   - Martillo
   - LLave
-  - 
+  - Tablon
   - 
   - 
   - 

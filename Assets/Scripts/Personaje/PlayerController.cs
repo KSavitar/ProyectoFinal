@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public ValoresOpciones values;
 
 
-    public float pipes = 0;
+    
 
 
 

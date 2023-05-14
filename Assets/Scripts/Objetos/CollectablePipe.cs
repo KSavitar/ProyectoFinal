@@ -8,7 +8,7 @@ public class CollectablePipe : MonoBehaviour
 
     public void Interact()
     {
-        tubes.pipes += 1;
+        
         Destroy(gameObject);
     }
 }

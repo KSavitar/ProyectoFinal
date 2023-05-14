@@ -16,6 +16,16 @@ public class Camara : MonoBehaviour
     public GameObject panel;
 
     public GameObject cursor;
+    [SerializeField] GameObject candadoObj;
+
+    [SerializeField] Animator puertaAnim,CajonAnim,puerta2Anim;
+    
+    private bool martillo = false;
+    [SerializeField]
+    private bool llave = false;
+    bool candado = true;
+
+    [SerializeField]int tuboCurva, tuboCruz, tuboPlano;
 
 
  private void Start()
@@ -56,42 +66,103 @@ public class Camara : MonoBehaviour
 
 
         }
-
-        else if (hit.collider.tag == "CollectablePipe")
-        {
-            if (Input.GetKeyDown(KeyCode.E))
+        else if(hit.collider.tag == "Martillo")
             {
-                    hit.collider.transform.GetComponent<CollectablePipe>().Interact();
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    Destroy(hit.collider.gameObject);
+                    martillo = true;
+                }
+            }
+            else if (hit.collider.tag == "Tablon")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    if(martillo == true)
+                    {
+                        Destroy(hit.collider.gameObject);
+                        martillo = false;
+                    }
+                }
+            }
+            else if (hit.collider.tag == "Llave")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Destroy(hit.collider.gameObject);
+                    llave = true;
+                }
+            }
+            else if (hit.collider.tag == "Puerta1")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    if(candado == true && llave == true)
+                    {
+                        candado = false;
+                        llave = false;
+                        Destroy(candadoObj);
+                    }
+                    else if(candado == false)
+                    {
+                        puertaAnim.SetBool("Abierta", true);
+                    }
+                }
+            }
+            else if (hit.collider.tag == "Puerta2")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    
+                    puerta2Anim.SetBool("Abierta", true);
+                    
+                }
+            }
+            else if (hit.collider.tag == "CajonSala1")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    if(CajonAnim.GetBool("Abierto") == true)
+                    {
+                        CajonAnim.SetBool("Abierto", false);
+                    }
+                    else if(CajonAnim.GetBool("Abierto") == false)
+                    {
+                        CajonAnim.SetBool("Abierto", true);
+                    }
+                }
             }
 
-        }
-        else if (hit.collider.tag == "WallPipeSpot")
-        {
-            if (Input.GetKeyDown(KeyCode.E))
+            else if (hit.collider.tag == "TuboCurva")
             {
-                    hit.collider.transform.GetComponent<InstancePipe>().Instancepipe();
+              if (Input.GetKeyDown(KeyCode.E))
+              {
+                    tuboCurva += 1;
+                    Destroy(hit.collider.gameObject);
+              }
             }
-
-        }
-        if (hit.collider.tag == "WallPipe")
-        {
-            if (Input.GetKeyDown(KeyCode.E))
+            else if (hit.collider.tag == "TuboCruz")
             {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    tuboCruz += 1;
+                    Destroy(hit.collider.gameObject);
 
-                    hit.collider.transform.GetComponent<RotatePipes>().RotarObjeto();
-
+                }
             }
+            else if (hit.collider.tag == "TuboPlano")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    tuboPlano += 1;
+                    Destroy(hit.collider.gameObject);
 
-
-
-
-
-
-        }
-        else
-        {
+                }
+            }
+            else if(hit.collider.tag == null)
+            {
                 panel.SetActive(false);
-        }
+            }
     }
 
 
