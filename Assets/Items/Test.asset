@@ -16,3 +16,4 @@ MonoBehaviour:
   type: 0
   action: 0
   stackable: 1
+  mesh: {fileID: 919132149155446097, guid: a06a3feab66f07a41a4deddf1765dbce, type: 3}

@@ -49,7 +49,7 @@ public class InventoryItemsScript : MonoBehaviour, IBeginDragHandler, IDragHandl
 	{
 		item = newItem;
 		image.sprite = newItem.image;
-		RefreshCount();					
+		RefreshCount();
 	}
 
 	/// <summary> Actualiza la cantidad del item en el inventario </summary>
@@ -58,5 +58,10 @@ public class InventoryItemsScript : MonoBehaviour, IBeginDragHandler, IDragHandl
 		amountText.text = ("x" + amount);
 		bool textActive = amount > 1;
 		amountText.gameObject.SetActive(textActive);
+		if (amount <= 0)
+		{
+			Destroy(gameObject);
+		}
+		print(amount);
 	}
 }

@@ -12,6 +12,9 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 	public Color selectedColor;
 	/// <summary> Color para cuando el slot no este seleccionado </summary>
 	public Color notSelectedColor;
+	/// <summary> Color para cuando el slot no este seleccionado </summary>
+	public bool isSelected;
+
 	private void Awake()
 	{
 		Deselected();
@@ -21,12 +24,14 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 	public void Selected()
 	{
 		image.color = selectedColor;
+		isSelected = true;
 	}
 
 	/// <summary> Cambiar el color del slot al notSelectedColor </summary>
 	public void Deselected()
 	{
 		image.color = notSelectedColor;
+		isSelected = false;
 	}
 
 	/// <summary> Convierte el slot en el parent del item al soltarlo </summary>

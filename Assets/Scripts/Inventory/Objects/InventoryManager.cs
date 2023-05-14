@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -39,6 +40,8 @@ public class InventoryManager : MonoBehaviour
 				ChangeSelectedSlot(newSelectedSlot);
 			}
 		}
+
+		
 	}
 
 	/// <summary> Comprueba si puede añadir el item al inventario </summary>
@@ -89,5 +92,41 @@ public class InventoryManager : MonoBehaviour
 
 		inventorySlots[newValue].Selected();
 		selectedSlot = newValue;
+	}
+
+	public void RemoveItemInSlot(ItemType itemType)
+	{
+		/*InventoryItemsScript itemInSlot = parentSlot.GetComponentInChildren<InventoryItemsScript>();*/
+		/*itemInSlot.amount--;
+		itemInSlot.RefreshCount();*/
+		print("Tipo: " + itemType);
+		for (int i = 0; i < inventorySlots.Length; i++)
+		{
+			InventorySlot slot = inventorySlots[i];
+			InventoryItemsScript itemInSlot = slot.GetComponentInChildren<InventoryItemsScript>();
+			if (itemInSlot != null)
+			{
+				print("Tipo slot: " + itemInSlot.item.type);
+			}
+
+
+			if (itemInSlot != null && itemInSlot.item.type == itemType)
+			{
+				print("Borrado");
+				itemInSlot.amount--;
+				itemInSlot.RefreshCount();
+				break;
+			}
+		}
+	}
+
+	public bool CheckItemInSlot(ItemType ItemType)
+	{
+		InventoryItemsScript itemInSlot = inventorySlots[selectedSlot].GetComponentInChildren<InventoryItemsScript>();
+		if (itemInSlot != null && itemInSlot.item.type == ItemType)
+		{
+			return true;
+		}
+		return false;
 	}
 }
