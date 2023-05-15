@@ -22,6 +22,9 @@ TagManager:
   - ZonaTuboCurva
   - TuboColocado
   - ZonaTuboCurva2
+  - PuertaFNAF
+  - Palanca
+  - Radio1
   layers:
   - Default
   - TransparentFX

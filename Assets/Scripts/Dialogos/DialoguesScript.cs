@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class DialoguesScript : MonoBehaviour
 {
-	[SerializeField] private GameObject dialogueBox;
+	public GameObject dialogueBox;
 	[SerializeField] private TextMeshProUGUI authorText;
 	[SerializeField] private TextMeshProUGUI dialogueText;
 	[SerializeField] private float timeLapse = 0.5f;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8589175315846063114}
   - component: {fileID: 2667048650029036550}
   - component: {fileID: 6077142987481213234}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: TuberiaColocadaCurz
   m_TagString: TuboColocado
   m_Icon: {fileID: 0}
@@ -110,3 +110,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005da807aa1ad5a4c9430eccd5ed4792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  values: {fileID: 0}

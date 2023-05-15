@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13243e3b5e498be4b85ab7b9cdb0ef49, type: 3}
+  m_Name: SalaFinal
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - author: ????
+    dialogue: "Esto es lo que sufr\xED, toma este papel y ordenalo todo, una vez
+      veas la verdad sabr\xE1s qu\xE9 opci\xF3n elegir."
+    timeToPass: '8
+
+'
