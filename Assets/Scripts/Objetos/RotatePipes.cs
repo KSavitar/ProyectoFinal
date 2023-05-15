@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class RotatePipes : MonoBehaviour
 {
-    public ValoresOpciones values;
-
     private float grados;
+    public ValoresOpciones values;
 
     void Start()
     {
         grados = 45;
+        values = GameObject.Find("GameManager").GetComponent<ValoresOpciones>();
     }
 
     void Update()
@@ -19,7 +19,23 @@ public class RotatePipes : MonoBehaviour
     }
     public void RotarObjeto()
     {
-        transform.Rotate(0, 0, grados);
+        transform.Rotate(0, grados, 0);
+        print(gameObject.transform.rotation);
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "A" && other.tag == "B")
+        {
+            values.TuberiasColocadas += 1;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "A" && other.tag == "B")
+        {
+            values.TuberiasColocadas -= 1;
+        }
     }
 }

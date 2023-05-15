@@ -10,19 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5a8419ad90111834cbb4d52b8cd10e78, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a8419ad90111834cbb4d52b8cd10e78, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.570602
+      value: -0.3012279
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a8419ad90111834cbb4d52b8cd10e78, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.2109714
+      value: -3.013
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a8419ad90111834cbb4d52b8cd10e78, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -90.45032
+      value: -98.458176
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a8419ad90111834cbb4d52b8cd10e78, type: 3}
       propertyPath: m_LocalRotation.w
@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a8419ad90111834cbb4d52b8cd10e78, type: 3}
       propertyPath: m_TagString
-      value: TuboCurvaColocado
+      value: TuboColocado
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -80,6 +80,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a8419ad90111834cbb4d52b8cd10e78, type: 3}
   m_PrefabInstance: {fileID: 1816596945764815194}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &497789436242534164
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582083560696851467}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!65 &1738933485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91,5 +107,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9996115, y: 0.3823316, z: 0.8718422}
-  m_Center: {x: -0.00000074505806, y: -0.00000018626451, z: -2.646978e-21}
+  m_Size: {x: 1.0659002, y: 0.3823316, z: 0.9456285}
+  m_Center: {x: 0.03314358, y: -0.00000017881393, z: -0.03689319}
+--- !u!114 &-2534906602829428806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582083560696851467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005da807aa1ad5a4c9430eccd5ed4792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  values: {fileID: 0}

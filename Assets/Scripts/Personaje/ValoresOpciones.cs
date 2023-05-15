@@ -8,6 +8,8 @@ public class ValoresOpciones : MonoBehaviour
     public float RotSpeed;
     public bool canMove = true;
 
+    public int TuberiasColocadas;
+
     void Start()
     {
         

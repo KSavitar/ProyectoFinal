@@ -18,7 +18,7 @@ public class Camara : MonoBehaviour
 	public GameObject cursor;
 	[SerializeField] GameObject candadoObj;
 
-	[SerializeField] Animator puertaAnim, CajonAnim, puerta2Anim;
+	[SerializeField] Animator puertaAnim, CajonAnim, puerta2Anim, puerta3Anim;
 
 	[SerializeField]
 	private bool martillo = false;
@@ -26,12 +26,14 @@ public class Camara : MonoBehaviour
 	private bool llave = false;
 	bool candado = true;
 
-	[SerializeField] int tuboCurva, tuboCruz, tuboPlano;
+	[SerializeField] int tuboCurva, tuboCruz, tuboPlano, tubosColocados;
 
 	[SerializeField] GameObject tuboCruzPrefab, tuboPlanoPrefab, tuboCurvoPrefab;
 
 	[SerializeField] InventoryManager inventoryManager;
 	[SerializeField] ItemsScript llaveSO, martilloSO, tuboCurvaSO, tuboCruzSO, tuboRectoSO; //SO significa ScriptableObject
+
+	
 
 	private void Update()
 	{
@@ -158,8 +160,10 @@ public class Camara : MonoBehaviour
                 {
 					if(tuboCruz > 0)
                     {
-						Instantiate(tuboCruzPrefab, hit.transform.position, new Quaternion(90,180,180,0));
+						print(hit.collider.transform.rotation);
+						Instantiate(tuboCruzPrefab, hit.transform.position, new Quaternion(-0.70711f,0,0,0.70711f));
 						tuboCruz -= 1;
+						tubosColocados += 1;
 						Destroy(hit.collider.gameObject);
 					}
                 }
@@ -170,8 +174,24 @@ public class Camara : MonoBehaviour
 				{
 					if (tuboCurva > 0)
 					{
-						Instantiate(tuboCurvoPrefab, hit.transform.position, new Quaternion(0,-90,90,0));
+						Instantiate(tuboCurvoPrefab, hit.transform.position, new Quaternion(-0.70711f,0,0, 0.70711f));
 						tuboCurva -= 1;
+						tubosColocados += 1;
+
+						Destroy(hit.collider.gameObject);
+					}
+				}
+			}
+			else if (hit.collider.tag == "ZonaTuboCurva2")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					if (tuboCurva > 0)
+					{
+						Instantiate(tuboCurvoPrefab, hit.transform.position, new Quaternion(-0.5f, 0.5f, -0.5f, 0.5f));
+						tuboCurva -= 1;
+						tubosColocados += 1;
+
 						Destroy(hit.collider.gameObject);
 					}
 				}
@@ -182,13 +202,22 @@ public class Camara : MonoBehaviour
 				{
 					if (tuboPlano > 0)
 					{
-						Instantiate(tuboPlanoPrefab, hit.transform.position, new Quaternion(0,90,-90,0));
+						Instantiate(tuboPlanoPrefab, hit.transform.position, new Quaternion(0.5f,0.5f,-0.5f,-0.5f));
 						tuboPlano -= 1;
+						tubosColocados += 1;
+
 						Destroy(hit.collider.gameObject);
 					}
 				}
 			}
-			
+			else if (hit.collider.tag == "TuboColocado")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					hit.collider.transform.GetComponent<RotatePipes>().RotarObjeto();
+				}
+			}
+
 
 			/*switch (hit.collider.tag)
 			{
@@ -232,6 +261,12 @@ public class Camara : MonoBehaviour
 		{
 			panel.SetActive(false);
 		}
+
+		if(tubosColocados == 5)
+        {
+			puerta3Anim.SetBool("Abierta", true);
+			tubosColocados += 1;
+        }
 	}
 
 
