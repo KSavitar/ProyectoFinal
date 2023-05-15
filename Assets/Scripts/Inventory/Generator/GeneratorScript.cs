@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GeneratorScript : MonoBehaviour
 {
 	[Header("Componentes del generador")]
-	[SerializeField] Slider amountRepaired;
+	[SerializeField] public Slider amountRepaired;
 	[SerializeField] TextMeshProUGUI generatorNameText;
 	[SerializeField] GeneratorObjectScript generator;
  
@@ -17,6 +17,8 @@ public class GeneratorScript : MonoBehaviour
 	[SerializeField] float timeToRepair;
 	[SerializeField] float regressingSpeed;
 
+
+	private NavMeshScript navMeshManager;
 	float currentTime;
 	bool isMousePressed => generator.isBeingClicked;
 	bool isRepaired;
@@ -26,10 +28,11 @@ public class GeneratorScript : MonoBehaviour
 		amountRepaired.maxValue = timeToRepair;
 		amountRepaired.minValue = 0;
 		generatorName = generatorNameText.text;
+		navMeshManager = FindObjectOfType<NavMeshScript>();
 	}
 	private void Update()
 	{
-		if (isMousePressed)
+		if (isMousePressed && !isRepaired)
 		{
 			print("Reparando");
 			if (amountRepaired.value < amountRepaired.maxValue)
@@ -40,6 +43,7 @@ public class GeneratorScript : MonoBehaviour
 			{
 				print("Reparado");
 				isRepaired = true;
+				navMeshManager.FinishGame();
 			}
 		}
 		else if (!isMousePressed && !isRepaired)

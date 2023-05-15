@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class GeneratorObjectScript : MonoBehaviour
 {
+	[SerializeField] Transform player;
 	public bool isBeingClicked;
 	public void OnMouseDown()
 	{
-		isBeingClicked = true;
+		if (Vector3.Distance(transform.position, player.position) <= 9f && Input.GetKeyDown(KeyCode.E))
+		{
+			isBeingClicked = true;
+		}
+		else
+		{
+			isBeingClicked = false;
+		}
 	}
 	private void OnMouseUpAsButton()
 	{

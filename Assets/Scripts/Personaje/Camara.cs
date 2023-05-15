@@ -24,7 +24,10 @@ public class Camara : MonoBehaviour
 	private bool martillo = false;
 	[SerializeField]
 	private bool llave = false;
+	public bool palanca = false;
 	bool candado = true;
+
+	GameObject tempObject;
 
 	[SerializeField] int tuboCurva, tuboCruz, tuboPlano, tubosColocados;
 
@@ -155,19 +158,19 @@ public class Camara : MonoBehaviour
 				}
 			}
 			else if(hit.collider.tag == "ZonaTuboCruz")
-            {
+			{
 				if(Input.GetKeyDown(KeyCode.E))
-                {
+				{
 					if(tuboCruz > 0)
-                    {
+					{
 						print(hit.collider.transform.rotation);
 						Instantiate(tuboCruzPrefab, hit.transform.position, new Quaternion(-0.70711f,0,0,0.70711f));
 						tuboCruz -= 1;
 						tubosColocados += 1;
 						Destroy(hit.collider.gameObject);
 					}
-                }
-            }
+				}
+			}
 			else if (hit.collider.tag == "ZonaTuboCurva")
 			{
 				if (Input.GetKeyDown(KeyCode.E))
@@ -217,7 +220,36 @@ public class Camara : MonoBehaviour
 					hit.collider.transform.GetComponent<RotatePipes>().RotarObjeto();
 				}
 			}
+			else if (hit.collider.tag == "Palanca")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					palanca = true;
+					Destroy(hit.collider.gameObject);
+				}
+			}
+			else if (hit.collider.tag == "PuertaFNAF")
+			{
+				if (Input.GetKey(KeyCode.E) && palanca)
+				{
+					tempObject = hit.collider.gameObject;
+					hit.collider.gameObject.GetComponent<FnafDoorsScript>().isOpen = false;
+				}
+				else
+				{
+					hit.collider.gameObject.GetComponent<FnafDoorsScript>().isOpen = true;
+				}
+			}
+			else
+			{
+				if (tempObject.GetComponent<FnafDoorsScript>() != null)
+				{
+					tempObject.GetComponent<FnafDoorsScript>().isOpen = true;
+				}
+				tempObject = null;
+			}
 
+			
 
 			/*switch (hit.collider.tag)
 			{
@@ -260,14 +292,24 @@ public class Camara : MonoBehaviour
 		else
 		{
 			panel.SetActive(false);
+			if (tempObject != null && tempObject.GetComponent<FnafDoorsScript>())
+			{
+				tempObject.GetComponent<FnafDoorsScript>().isOpen = true;
+			}
 		}
 
-		if(tubosColocados == 5)
-        {
+		if (tempObject == null)
+		{
+
+		}
+
+		if (tubosColocados == 5)
+		{
 			puerta3Anim.SetBool("Abierta", true);
 			tubosColocados += 1;
-        }
+		}
 	}
+
 
 
 	public void Cam()
