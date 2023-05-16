@@ -18,18 +18,18 @@ public class Camara : MonoBehaviour
 	public GameObject cursor;
 	[SerializeField] GameObject candadoObj;
 
-	[SerializeField] Animator puertaAnim, CajonAnim, puerta2Anim, puerta3Anim,manivelaAnim;
+	[SerializeField] Animator puertaAnim, CajonAnim, puerta2Anim, puerta3Anim, manivelaAnim, cristalAnim, cofreAnim, maquinaAnim, puerta4Anim;
 
 	[SerializeField]
 	private bool martillo = false;
 	[SerializeField]
 	private bool llave = false;
 	public bool palanca = false;
-	bool candado = true;
+	bool candado = true, candado2 = true;
 	[SerializeField] bool manivela = false;
-	bool medallonAzul = false, medallonRosa = false, medallonVerde = false;
+	bool medallonAzul = false, medallonRosa = false, medallonVerde = false, piezaMaquina = false;
 
-	[SerializeField] DialogueObject dialogSala1;
+	[SerializeField] DialogueObject dialogSala1, dialogSala2;
 
 	GameObject tempObject;
 
@@ -307,6 +307,87 @@ public class Camara : MonoBehaviour
 
 				}
 			}
+			else if (hit.collider.tag == "MedallonVerde")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					medallonVerde = true;
+					Destroy(hit.collider.gameObject);
+				}
+			}
+			else if (hit.collider.tag == "MedallonHuecoVerde")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					if (medallonVerde == true)
+					{
+						medallonVerdeC.SetActive(true);
+						Destroy(hit.collider.gameObject);
+						medallones += 1;
+					}
+
+				}
+			}
+			else if(hit.collider.tag == "Cristal")
+            {
+				if(Input.GetKeyDown(KeyCode.E))
+                {
+					if(martillo == true)
+                    {
+						cristalAnim.SetBool("Abierta", true);
+						hit.collider.enabled = false;
+                    }
+                }
+            }
+			else if (hit.collider.tag == "PiezaMaquina")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					piezaMaquina = true;
+
+					Destroy(hit.collider.gameObject);
+				}
+			}
+			else if (hit.collider.tag == "Cofre")
+			{
+				panel.SetActive(false);
+			}
+			else if (hit.collider.tag == "MaquinaLlave")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					if(piezaMaquina == true)
+                    {
+						maquinaAnim.SetBool("Abierta", true);
+						piezaMaquina = false;
+
+					}
+				}
+			}
+			else if (hit.collider.tag == "Radio2")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					hit.collider.transform.GetComponent<DialoguesScript>().dialogueBox.SetActive(true);
+					hit.collider.transform.GetComponent<DialoguesScript>().DisplayDialogue(dialogSala2);
+				}
+			}
+			else if (hit.collider.tag == "Puerta3")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					if (candado == true && llave == true)
+					{
+						candado = false;
+						llave = false;
+						
+					}
+					else if (candado == false)
+					{
+						puerta4Anim.SetBool("Abierta", true);
+					}
+				}
+			}
 			else if (hit.collider.tag == "PuertaFNAF")
 			{
 				if (Input.GetKey(KeyCode.E) && palanca)
@@ -550,6 +631,10 @@ public class Camara : MonoBehaviour
 			puerta3Anim.SetBool("Abierta", true);
 			tubosColocados += 1;
 		}
+		if(medallones == 3)
+        {
+			cofreAnim.SetBool("Abierta", true);
+        }
 	}
 
 

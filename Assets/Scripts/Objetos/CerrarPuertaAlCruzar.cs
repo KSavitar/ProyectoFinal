@@ -20,6 +20,7 @@ public class CerrarPuertaAlCruzar : MonoBehaviour
         if(collision.collider.tag == "Player")
         {
             puertaAnim.SetBool("Abierta", false);
+            this.enabled = false;
         }
     }
 }
