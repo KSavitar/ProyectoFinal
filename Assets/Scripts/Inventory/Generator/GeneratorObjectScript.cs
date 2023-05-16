@@ -6,7 +6,7 @@ public class GeneratorObjectScript : MonoBehaviour
 {
 	[SerializeField] Transform player;
 	public bool isBeingClicked;
-	public void OnMouseDown()
+	/*public void OnMouseDown()
 	{
 		if (Vector3.Distance(transform.position, player.position) <= 9f && Input.GetKeyDown(KeyCode.E))
 		{
@@ -28,5 +28,5 @@ public class GeneratorObjectScript : MonoBehaviour
 		{
 			isBeingClicked = false;
 		}
-	}
+	}*/
 }

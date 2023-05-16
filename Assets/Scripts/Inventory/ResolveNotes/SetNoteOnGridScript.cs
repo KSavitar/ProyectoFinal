@@ -49,7 +49,8 @@ public class SetNoteOnGridScript : MonoBehaviour
 				print("GGGGG");
 				goToDefault = false;
 				m_Camera.transform.rotation = cameraOnPlayerRotation;
-				m_Camera.GetComponent<CameraTestScript>().enabled = true;
+				m_Camera.GetComponentInParent<PlayerController>().enabled = true;
+				m_Camera.GetComponent<Camara>().enabled = true;
 			}
 		}
 	}
@@ -60,7 +61,8 @@ public class SetNoteOnGridScript : MonoBehaviour
 		{
 			rotate = true;
 			print("Hey");
-			m_Camera.GetComponent<CameraTestScript>().enabled = false;
+			m_Camera.GetComponent<Camara>().enabled = false;
+			m_Camera.GetComponentInParent<PlayerController>().enabled = false;
 			cameraOnPlayerRotation = m_Camera.transform.rotation;
 			cameraOnPlayerTransform = m_Camera.transform.position;
 		}

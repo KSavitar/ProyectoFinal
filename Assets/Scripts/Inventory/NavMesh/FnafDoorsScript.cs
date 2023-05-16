@@ -16,6 +16,5 @@ public class FnafDoorsScript : MonoBehaviour
 
 	private void Update()
 	{
-		print(isOpen);
 	}
 }

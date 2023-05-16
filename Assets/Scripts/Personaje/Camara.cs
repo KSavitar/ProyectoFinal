@@ -254,15 +254,15 @@ public class Camara : MonoBehaviour
 				if (Input.GetKeyDown(KeyCode.E))
 				{
 					if(manivela == true)
-                    {
+					{
 						manivelaColocada.SetActive(true);
 						hit.collider.gameObject.layer = 0;
 						manivelaAnim.SetBool("Abierta", true);
 						manivela = false;
-                    }
+					}
 					
 						
-                    
+					
 				}
 			}
 			else if (hit.collider.tag == "MedallonAzul")
@@ -278,7 +278,7 @@ public class Camara : MonoBehaviour
 				if (Input.GetKeyDown(KeyCode.E))
 				{
 					if(medallonAzul == true)
-                    {
+					{
 						medallonAzulC.SetActive(true);
 						Destroy(hit.collider.gameObject);
 						medallones += 1;
@@ -307,210 +307,236 @@ public class Camara : MonoBehaviour
 
 				}
 			}
-
 			else if (hit.collider.tag == "PuertaFNAF")
-            {
-                if (Input.GetKey(KeyCode.E) && palanca)
-                {
-                    tempObject = hit.collider.gameObject;
-                    hit.collider.gameObject.GetComponent<FnafDoorsScript>().isOpen = false;
-                }
-                else
-                {
-                    hit.collider.gameObject.GetComponent<FnafDoorsScript>().isOpen = true;
-                }
-            }
-            else
-            {
-                if (tempObject.GetComponent<FnafDoorsScript>() != null)
-                {
-                    tempObject.GetComponent<FnafDoorsScript>().isOpen = true;
-                }
-                tempObject = null;
-            }
+			{
+				if (Input.GetKey(KeyCode.E) && palanca)
+				{
+					tempObject = hit.collider.gameObject;
+					hit.collider.gameObject.GetComponent<FnafDoorsScript>().isOpen = false;
+				}
+				else
+				{
+					hit.collider.gameObject.GetComponent<FnafDoorsScript>().isOpen = true;
+				}
+			}
+			else if (hit.collider.tag == "Generador")
+			{
+				if (Input.GetKey(KeyCode.E))
+				{
+					tempObject = hit.collider.gameObject;
+					hit.collider.gameObject.GetComponent<GeneratorObjectScript>().isBeingClicked = true;
+				}
+				else
+				{
+					hit.collider.gameObject.GetComponent<GeneratorObjectScript>().isBeingClicked = false;
+				}
+			}
+			else
+			{
+				if (tempObject != null)
+				{
+					if (tempObject.GetComponent<FnafDoorsScript>() != null)
+					{
+						tempObject.GetComponent<FnafDoorsScript>().isOpen = true;
+					}
+					else if (tempObject.GetComponent<GeneratorObjectScript>() != null)
+					{
+						hit.collider.gameObject.GetComponent<GeneratorObjectScript>().isBeingClicked = false;
+					}
+				}
+				
+				tempObject = null;
+			}
 
 
 
 
 
-            //switch (hit.collider.tag)
-            //{
-            //	case "Cerrojo":
-            //		panel.SetActive(true);
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
+			//switch (hit.collider.tag)
+			//{
+			//	case "Cerrojo":
+			//		panel.SetActive(true);
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
 
-            //			hit.collider.transform.GetComponent<CajaFuerte>().enabled = true;
-            //		}
-            //		else if (Input.GetKeyDown(KeyCode.Escape))
-            //		{
-            //			hit.collider.transform.GetComponent<CajaFuerte>().enabled = false;
+			//			hit.collider.transform.GetComponent<CajaFuerte>().enabled = true;
+			//		}
+			//		else if (Input.GetKeyDown(KeyCode.Escape))
+			//		{
+			//			hit.collider.transform.GetComponent<CajaFuerte>().enabled = false;
 
-            //			values.canMove = true;
-            //		}
-            //		break;
-            //	case "Martillo":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			Destroy(hit.collider.gameObject);
-            //			martillo = true;
-            //			AddToInventory(martilloSO);
-            //		}
-            //		break;
-            //	case "Tablon":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			if (martillo == true)
-            //			{
-            //				Destroy(hit.collider.gameObject);
-            //				martillo = false;
-            //			}
-            //		}
-            //		break;
-            //	case "Llave":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			Destroy(hit.collider.gameObject);
-            //			llave = true;
-            //			//AddToInventory(llaveSO);
-            //		}
-            //		break;
-            //	case "Puerta1":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			if (candado == true && llave == true)
-            //			{
-            //				candado = false;
-            //				llave = false;
-            //				Destroy(candadoObj);
-            //			}
-            //			else if (candado == false)
-            //			{
-            //				puertaAnim.SetBool("Abierta", true);
-            //			}
-            //		}
-            //		break;
-            //	case "Puerta2":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
+			//			values.canMove = true;
+			//		}
+			//		break;
+			//	case "Martillo":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			Destroy(hit.collider.gameObject);
+			//			martillo = true;
+			//			AddToInventory(martilloSO);
+			//		}
+			//		break;
+			//	case "Tablon":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			if (martillo == true)
+			//			{
+			//				Destroy(hit.collider.gameObject);
+			//				martillo = false;
+			//			}
+			//		}
+			//		break;
+			//	case "Llave":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			Destroy(hit.collider.gameObject);
+			//			llave = true;
+			//			//AddToInventory(llaveSO);
+			//		}
+			//		break;
+			//	case "Puerta1":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			if (candado == true && llave == true)
+			//			{
+			//				candado = false;
+			//				llave = false;
+			//				Destroy(candadoObj);
+			//			}
+			//			else if (candado == false)
+			//			{
+			//				puertaAnim.SetBool("Abierta", true);
+			//			}
+			//		}
+			//		break;
+			//	case "Puerta2":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
 
-            //			puerta2Anim.SetBool("Abierta", true);
+			//			puerta2Anim.SetBool("Abierta", true);
 
-            //		}
-            //		break;
-            //	case "CajonSala1":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			if (CajonAnim.GetBool("Abierto") == true)
-            //			{
-            //				CajonAnim.SetBool("Abierto", false);
-            //			}
-            //			else if (CajonAnim.GetBool("Abierto") == false)
-            //			{
-            //				CajonAnim.SetBool("Abierto", true);
-            //			}
-            //		}
-            //		break;
-            //	case "TuboCurva":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			tuboCurva += 1;
-            //			Destroy(hit.collider.gameObject);
-            //			//AddToInventory(tuboCurvaSO);
-            //		}
-            //		break;
-            //	case "TuboCruz":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			tuboCruz += 1;
-            //			Destroy(hit.collider.gameObject);
-            //			//AddToInventory(tuboCruzSO);
+			//		}
+			//		break;
+			//	case "CajonSala1":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			if (CajonAnim.GetBool("Abierto") == true)
+			//			{
+			//				CajonAnim.SetBool("Abierto", false);
+			//			}
+			//			else if (CajonAnim.GetBool("Abierto") == false)
+			//			{
+			//				CajonAnim.SetBool("Abierto", true);
+			//			}
+			//		}
+			//		break;
+			//	case "TuboCurva":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			tuboCurva += 1;
+			//			Destroy(hit.collider.gameObject);
+			//			//AddToInventory(tuboCurvaSO);
+			//		}
+			//		break;
+			//	case "TuboCruz":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			tuboCruz += 1;
+			//			Destroy(hit.collider.gameObject);
+			//			//AddToInventory(tuboCruzSO);
 
-            //		}
-            //		break;
-            //	case "TuboPlano":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			tuboPlano += 1;
-            //			Destroy(hit.collider.gameObject);
-            //			//AddToInventory(tuboRectoSO);
-            //		}
-            //		break;
-            //	case "ZonaTuboCruz":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			if (tuboCruz > 0)
-            //			{
-            //				print(hit.collider.transform.rotation);
-            //				Instantiate(tuboCruzPrefab, hit.transform.position, new Quaternion(-0.70711f, 0, 0, 0.70711f));
-            //				tuboCruz -= 1;
-            //				tubosColocados += 1;
-            //				Destroy(hit.collider.gameObject);
-            //			}
-            //		}
-            //		break;
-            //	case "ZonaTuboCurva":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			if (tuboCurva > 0)
-            //			{
-            //				Instantiate(tuboCurvoPrefab, hit.transform.position, new Quaternion(-0.70711f, 0, 0, 0.70711f));
-            //				tuboCurva -= 1;
-            //				tubosColocados += 1;
+			//		}
+			//		break;
+			//	case "TuboPlano":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			tuboPlano += 1;
+			//			Destroy(hit.collider.gameObject);
+			//			//AddToInventory(tuboRectoSO);
+			//		}
+			//		break;
+			//	case "ZonaTuboCruz":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			if (tuboCruz > 0)
+			//			{
+			//				print(hit.collider.transform.rotation);
+			//				Instantiate(tuboCruzPrefab, hit.transform.position, new Quaternion(-0.70711f, 0, 0, 0.70711f));
+			//				tuboCruz -= 1;
+			//				tubosColocados += 1;
+			//				Destroy(hit.collider.gameObject);
+			//			}
+			//		}
+			//		break;
+			//	case "ZonaTuboCurva":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			if (tuboCurva > 0)
+			//			{
+			//				Instantiate(tuboCurvoPrefab, hit.transform.position, new Quaternion(-0.70711f, 0, 0, 0.70711f));
+			//				tuboCurva -= 1;
+			//				tubosColocados += 1;
 
-            //				Destroy(hit.collider.gameObject);
-            //			}
-            //		}
-            //		break;
-            //	case "ZonaTuboCurva2":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			if (tuboCurva > 0)
-            //			{
-            //				Instantiate(tuboCurvoPrefab, hit.transform.position, new Quaternion(-0.5f, 0.5f, -0.5f, 0.5f));
-            //				tuboCurva -= 1;
-            //				tubosColocados += 1;
+			//				Destroy(hit.collider.gameObject);
+			//			}
+			//		}
+			//		break;
+			//	case "ZonaTuboCurva2":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			if (tuboCurva > 0)
+			//			{
+			//				Instantiate(tuboCurvoPrefab, hit.transform.position, new Quaternion(-0.5f, 0.5f, -0.5f, 0.5f));
+			//				tuboCurva -= 1;
+			//				tubosColocados += 1;
 
-            //				Destroy(hit.collider.gameObject);
-            //			}
-            //		}
-            //		break;
-            //	case "ZonaTuboPlano":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			if (tuboPlano > 0)
-            //			{
-            //				Instantiate(tuboPlanoPrefab, hit.transform.position, new Quaternion(0.5f, 0.5f, -0.5f, -0.5f));
-            //				tuboPlano -= 1;
-            //				tubosColocados += 1;
+			//				Destroy(hit.collider.gameObject);
+			//			}
+			//		}
+			//		break;
+			//	case "ZonaTuboPlano":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			if (tuboPlano > 0)
+			//			{
+			//				Instantiate(tuboPlanoPrefab, hit.transform.position, new Quaternion(0.5f, 0.5f, -0.5f, -0.5f));
+			//				tuboPlano -= 1;
+			//				tubosColocados += 1;
 
-            //				Destroy(hit.collider.gameObject);
-            //			}
-            //		}
-            //		break;
-            //	case "TuboColocado":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			hit.collider.transform.GetComponent<RotatePipes>().RotarObjeto();
-            //		}
-            //		break;
-            //	case "Palanca":
-            //		if (Input.GetKeyDown(KeyCode.E))
-            //		{
-            //			palanca = true;
-            //			Destroy(hit.collider.gameObject);
-            //		}
-            //		break;
-            //	default:
-            //		break;
-            //}
-        }
+			//				Destroy(hit.collider.gameObject);
+			//			}
+			//		}
+			//		break;
+			//	case "TuboColocado":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			hit.collider.transform.GetComponent<RotatePipes>().RotarObjeto();
+			//		}
+			//		break;
+			//	case "Palanca":
+			//		if (Input.GetKeyDown(KeyCode.E))
+			//		{
+			//			palanca = true;
+			//			Destroy(hit.collider.gameObject);
+			//		}
+			//		break;
+			//	default:
+			//		break;
+			//}
+		}
 		else
 		{
 			panel.SetActive(false);
-			if (tempObject != null && tempObject.GetComponent<FnafDoorsScript>())
+			if (tempObject != null)
 			{
-				tempObject.GetComponent<FnafDoorsScript>().isOpen = true;
+				if (tempObject.GetComponent<FnafDoorsScript>())
+				{
+					tempObject.GetComponent<FnafDoorsScript>().isOpen = true;
+				}
+				else if (tempObject.GetComponent<GeneratorObjectScript>())
+				{
+					hit.collider.gameObject.GetComponent<GeneratorObjectScript>().isBeingClicked = false;
+				}
 			}
 		}
 
