@@ -11,6 +11,7 @@ public class DialoguesScript : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI authorText;
 	[SerializeField] private TextMeshProUGUI dialogueText;
 	[SerializeField] private float timeLapse = 0.5f;
+	public AudioSource source;
 	int dialogueTime;
 	float timer = 0f;
 	float maxTimer = 5f;
@@ -20,6 +21,7 @@ public class DialoguesScript : MonoBehaviour
 	private void Start()
 	{
 		DisplayDialogue(currentDialogue);
+		source = GetComponent<AudioSource>();
 	}
 
 	private IEnumerator MoveThroughDialogue(DialogueObject dialogueObject)
@@ -43,6 +45,7 @@ public class DialoguesScript : MonoBehaviour
 			yield return null;
 		}
 		dialogueBox.SetActive(false);
+		source.enabled = false;
 	}
 
 	private void Update()

@@ -19,8 +19,8 @@ public class Camara : MonoBehaviour
 	[SerializeField] GameObject candadoObj;
 
 	[SerializeField] Animator puertaAnim, CajonAnim, puerta2Anim, puerta3Anim, manivelaAnim, cristalAnim, cofreAnim, maquinaAnim, puerta4Anim;
-
-	[SerializeField]
+	[SerializeField] AudioSource audios;
+	[SerializeField] AudioClip Tuberia,cogerItem, cristal, martilloA;
 	private bool martillo = false;
 	[SerializeField]
 	private bool llave = false;
@@ -29,13 +29,13 @@ public class Camara : MonoBehaviour
 	[SerializeField] bool manivela = false;
 	bool medallonAzul = false, medallonRosa = false, medallonVerde = false, piezaMaquina = false;
 
-	[SerializeField] DialogueObject dialogSala1, dialogSala2;
+	[SerializeField] DialogueObject dialogSala1, dialogSala2, dialogGas;
 
 	GameObject tempObject;
 
 	[SerializeField] int tuboCurva, tuboCruz, tuboPlano, tubosColocados,medallones;
 
-	[SerializeField] GameObject tuboCruzPrefab, tuboPlanoPrefab, tuboCurvoPrefab, manivelaColocada,medallonAzulC, medallonVerdeC, medallonRosaC;
+	[SerializeField] GameObject tuboCruzPrefab, tuboPlanoPrefab, tuboCurvoPrefab, manivelaColocada,medallonAzulC, medallonVerdeC, medallonRosaC, PTCruz1, PTCruz2,PTCurva,PTCurva2,PTPlana, sonidoHumo;
 
 	[SerializeField] InventoryManager inventoryManager;
 	[SerializeField] ItemsScript llaveSO, martilloSO, tuboCurvaSO, tuboCruzSO, tuboRectoSO; //SO significa ScriptableObject
@@ -55,13 +55,13 @@ public class Camara : MonoBehaviour
 				
 				if (Input.GetKeyDown(KeyCode.E))
 				{
-
+					
 					hit.collider.transform.GetComponent<CajaFuerte>().enabled = true;
 				}
 				else if (Input.GetKeyDown(KeyCode.Escape))
 				{
 					hit.collider.transform.GetComponent<CajaFuerte>().enabled = false;
-
+					
 					values.canMove = true;
 				}
 			}
@@ -71,6 +71,7 @@ public class Camara : MonoBehaviour
 				{
 					Destroy(hit.collider.gameObject);
 					martillo = true;
+					audios.PlayOneShot(cogerItem);
 					//AddToInventory(martilloSO);
 				}
 			}
@@ -80,6 +81,7 @@ public class Camara : MonoBehaviour
 				{
 					if (martillo)
 					{
+						audios.PlayOneShot(martilloA);
 						Destroy(hit.collider.gameObject);
 						martillo = false;
 						//inventoryManager.RemoveItemInSlot(ItemType.Martillo);
@@ -90,6 +92,7 @@ public class Camara : MonoBehaviour
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
+					audios.PlayOneShot(cogerItem);
 					Destroy(hit.collider.gameObject);
 					llave = true;
 					//AddToInventory(llaveSO);
@@ -101,6 +104,7 @@ public class Camara : MonoBehaviour
 				{
 					if (candado == true && llave == true)
 					{
+						audios.PlayOneShot(cogerItem);
 						candado = false;
 						llave = false;
 						Destroy(candadoObj);
@@ -138,6 +142,7 @@ public class Camara : MonoBehaviour
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
+					audios.PlayOneShot(cogerItem);
 					tuboCurva += 1;
 					Destroy(hit.collider.gameObject);
 					//AddToInventory(tuboCurvaSO);
@@ -147,6 +152,7 @@ public class Camara : MonoBehaviour
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
+					audios.PlayOneShot(cogerItem);
 					tuboCruz += 1;
 					Destroy(hit.collider.gameObject);
 					//AddToInventory(tuboCruzSO);
@@ -157,6 +163,7 @@ public class Camara : MonoBehaviour
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
+					audios.PlayOneShot(cogerItem);
 					tuboPlano += 1;
 					Destroy(hit.collider.gameObject);
 					//AddToInventory(tuboRectoSO);
@@ -168,8 +175,27 @@ public class Camara : MonoBehaviour
 				{
 					if(tuboCruz > 0)
 					{
+						PTCruz1.SetActive(false);
+						audios.PlayOneShot(Tuberia);
 						print(hit.collider.transform.rotation);
 						Instantiate(tuboCruzPrefab, hit.transform.position, new Quaternion(-0.70711f,0,0,0.70711f));
+						tuboCruz -= 1;
+						tubosColocados += 1;
+						Destroy(hit.collider.gameObject);
+					}
+				}
+			}
+			else if (hit.collider.tag == "ZonaTuboCruz2")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					if (tuboCruz > 0)
+					{
+						PTCruz2.SetActive(false);
+
+						audios.PlayOneShot(Tuberia);
+						print(hit.collider.transform.rotation);
+						Instantiate(tuboCruzPrefab, hit.transform.position, new Quaternion(-0.70711f, 0, 0, 0.70711f));
 						tuboCruz -= 1;
 						tubosColocados += 1;
 						Destroy(hit.collider.gameObject);
@@ -182,6 +208,10 @@ public class Camara : MonoBehaviour
 				{
 					if (tuboCurva > 0)
 					{
+						PTCurva.SetActive(false);
+
+						audios.PlayOneShot(Tuberia);
+
 						Instantiate(tuboCurvoPrefab, hit.transform.position, new Quaternion(-0.70711f,0,0, 0.70711f));
 						tuboCurva -= 1;
 						tubosColocados += 1;
@@ -196,6 +226,10 @@ public class Camara : MonoBehaviour
 				{
 					if (tuboCurva > 0)
 					{
+						PTCurva2.SetActive(false);
+
+						audios.PlayOneShot(Tuberia);
+
 						Instantiate(tuboCurvoPrefab, hit.transform.position, new Quaternion(-0.5f, 0.5f, -0.5f, 0.5f));
 						tuboCurva -= 1;
 						tubosColocados += 1;
@@ -210,6 +244,10 @@ public class Camara : MonoBehaviour
 				{
 					if (tuboPlano > 0)
 					{
+						PTPlana.SetActive(false);
+
+						audios.PlayOneShot(Tuberia);
+
 						Instantiate(tuboPlanoPrefab, hit.transform.position, new Quaternion(0.5f,0.5f,-0.5f,-0.5f));
 						tuboPlano -= 1;
 						tubosColocados += 1;
@@ -218,17 +256,11 @@ public class Camara : MonoBehaviour
 					}
 				}
 			}
-			else if (hit.collider.tag == "TuboColocado")
-			{
-				if (Input.GetKeyDown(KeyCode.E))
-				{
-					hit.collider.transform.GetComponent<RotatePipes>().RotarObjeto();
-				}
-			}
 			else if (hit.collider.tag == "Palanca")
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
+					audios.PlayOneShot(cogerItem);
 					palanca = true;
 					Destroy(hit.collider.gameObject);
 				}
@@ -239,12 +271,14 @@ public class Camara : MonoBehaviour
 				{
 					hit.collider.transform.GetComponent<DialoguesScript>().dialogueBox.SetActive(true);
 					hit.collider.transform.GetComponent<DialoguesScript>().DisplayDialogue(dialogSala1);
+					hit.collider.GetComponent<DialoguesScript>().source.enabled = true;
 				}
 			}
 			else if (hit.collider.tag == "Manivela")
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
+					audios.PlayOneShot(cogerItem);
 					manivela = true;
 					Destroy(hit.collider.gameObject);
 				}
@@ -269,6 +303,7 @@ public class Camara : MonoBehaviour
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
+					audios.PlayOneShot(cogerItem);
 					medallonAzul = true;
 					Destroy(hit.collider.gameObject);
 				}
@@ -290,6 +325,7 @@ public class Camara : MonoBehaviour
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
+					audios.PlayOneShot(cogerItem);
 					medallonRosa = true;
 					Destroy(hit.collider.gameObject);
 				}
@@ -311,6 +347,7 @@ public class Camara : MonoBehaviour
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
+					audios.PlayOneShot(cogerItem);
 					medallonVerde = true;
 					Destroy(hit.collider.gameObject);
 				}
@@ -334,6 +371,7 @@ public class Camara : MonoBehaviour
                 {
 					if(martillo == true)
                     {
+						audios.PlayOneShot(cristal);
 						cristalAnim.SetBool("Abierta", true);
 						hit.collider.enabled = false;
                     }
@@ -343,6 +381,7 @@ public class Camara : MonoBehaviour
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
+					audios.PlayOneShot(cogerItem);
 					piezaMaquina = true;
 
 					Destroy(hit.collider.gameObject);
@@ -372,6 +411,14 @@ public class Camara : MonoBehaviour
 					hit.collider.transform.GetComponent<DialoguesScript>().DisplayDialogue(dialogSala2);
 				}
 			}
+			else if (hit.collider.tag == "Radio2")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					hit.collider.transform.GetComponent<DialoguesScript>().dialogueBox.SetActive(true);
+					hit.collider.transform.GetComponent<DialoguesScript>().DisplayDialogue(dialogGas);
+				}
+			}
 			else if (hit.collider.tag == "Puerta3")
 			{
 				if (Input.GetKeyDown(KeyCode.E))
@@ -388,6 +435,21 @@ public class Camara : MonoBehaviour
 					}
 				}
 			}
+			else if (hit.collider.tag == "PastillaRoja")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					hit.collider.GetComponent<PastillaRoja>().enabled = true;
+				}
+			}
+			else if (hit.collider.tag == "PastillaAzul")
+			{
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					hit.collider.GetComponent<PastillaAzul>().enabled = true;
+				}
+			}
+
 			else if (hit.collider.tag == "PuertaFNAF")
 			{
 				if (Input.GetKey(KeyCode.E) && palanca)
@@ -628,6 +690,7 @@ public class Camara : MonoBehaviour
 
 		if (tubosColocados == 5)
 		{
+			sonidoHumo.SetActive(false);
 			puerta3Anim.SetBool("Abierta", true);
 			tubosColocados += 1;
 		}

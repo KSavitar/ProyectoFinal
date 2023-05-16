@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 	private Vector3 moveDir;
 	public float speed = 12, speedRotation, jumpForce, gravity;
 
-
+	public AudioSource caminar;
 	public bool isGrounded, haveRest;
 	public Transform groundPoint;
 	public float groundRadius;
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
 	void Start()
 	{
-
+		caminar.enabled = false;
 	}
 
 	void Update()
@@ -45,8 +45,18 @@ public class PlayerController : MonoBehaviour
 
 			moveDir = new Vector3(Input.GetAxis("Horizontal") * speed, rb.velocity.y, Input.GetAxis("Vertical") * speed);
 
-
 			moveDir = transform.TransformDirection(moveDir);
+
+			if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            {
+				caminar.enabled = true;
+
+			}
+			else
+            {
+				caminar.enabled =false;
+            }
+
 
 
 			if (Input.GetMouseButton(2)) KeepRot();

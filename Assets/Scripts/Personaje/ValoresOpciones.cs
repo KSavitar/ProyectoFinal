@@ -20,4 +20,9 @@ public class ValoresOpciones : MonoBehaviour
     {
         
     }
+
+    public void GoMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
 }

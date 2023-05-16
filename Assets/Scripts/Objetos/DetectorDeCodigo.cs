@@ -28,6 +28,7 @@ public class DetectorDeCodigo : MonoBehaviour
             B.enabled = false;
             C.enabled = false;
             values.canMove = true;
+
             this.enabled = false;
             
             

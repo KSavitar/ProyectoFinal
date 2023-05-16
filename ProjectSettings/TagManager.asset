@@ -25,6 +25,27 @@ TagManager:
   - PuertaFNAF
   - Palanca
   - Radio1
+  - MaquinaLlave
+  - Puerta3
+  - Cristal
+  - Cofre
+  - Generador
+  - MedallonAzul
+  - MedallonHuecoAzul
+  - MaquinaManivela
+  - PiezaMaquina
+  - MedallonVerde
+  - MedallonRosa
+  - MedallonHuecoVerde
+  - Radio2
+  - Manivela
+  - MedallonHuecoRosa
+  - ZonaTuboCruz2
+  - MusicaDefault
+  - SalaGas
+  - Radio3
+  - PastillaRoja
+  - PastillaAzul
   layers:
   - Default
   - TransparentFX
