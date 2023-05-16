@@ -5,7 +5,7 @@ using UnityEngine;
 public class PanelFinal : MonoBehaviour
 {
     float timer;
-    [SerializeField] GameObject panelEnd, musicaCreditos;
+    [SerializeField] GameObject panelEnd, musicaCreditos, panelCredito;
     GameObject panelCreditos;
     [SerializeField] ValoresOpciones values;
     [SerializeField] AudioSource source;
@@ -20,9 +20,14 @@ public class PanelFinal : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer > 20)
+        if(timer > 10)
         {
-            panelCreditos.SetActive(false);
+            
+            panelCredito.SetActive(true);
+        }
+        if (timer > 20)
+        {
+
             panelEnd.SetActive(true);
         }
     }
