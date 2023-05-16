@@ -8,10 +8,19 @@ public class CallejonAnimation : MonoBehaviour
 	[SerializeField] Animator villainAnim;
 	[SerializeField] Animator cameraAnim;
 	[SerializeField] Animator adrianAnim;
+	float timer;
 
 	[SerializeField] Transform VillainParent;
+    private void Update()
+    {
+		timer += Time.deltaTime;
+		if(timer> 13f)
+        {
+			UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        }
+    }
 
-	private Vector3 pos = new Vector3(-1.93f, -0.34f, -8.96f);
+    private Vector3 pos = new Vector3(-1.93f, -0.34f, -8.96f);
 
 	private void start()
 	{
