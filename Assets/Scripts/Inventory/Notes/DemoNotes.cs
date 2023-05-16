@@ -1,10 +1,7 @@
 using Newtonsoft.Json;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 /// <summary> Misma funcion que el DemoScript para las notas </summary>
 public class DemoNotes : MonoBehaviour
@@ -12,7 +9,7 @@ public class DemoNotes : MonoBehaviour
 	/// <summary> Inventario de notas </summary>
 	public NotesInventoryScript notesInventory;
 	/// <summary> Lista de notas recogibles </summary>
-	public List<NotesScript> notesToPickup = new List<NotesScript>();
+	[SerializeField] List<NotesScript> notesToPickup = new List<NotesScript>();
 
 	private void Awake()
 	{

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7faa33f2668dafb41a7503151c271e02, type: 3}
   m_Name: TuboCurva
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 0f061b4bd0275bc4eb60f2af31e7375a, type: 3}
+  image: {fileID: 21300000, guid: 3967c16b8d1657d468f74b49546b4573, type: 3}
   type: 1
   stackable: 1

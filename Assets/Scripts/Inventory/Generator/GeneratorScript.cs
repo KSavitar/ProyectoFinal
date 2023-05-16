@@ -16,9 +16,10 @@ public class GeneratorScript : MonoBehaviour
 	[SerializeField] string generatorName;
 	[SerializeField] float timeToRepair;
 	[SerializeField] float regressingSpeed;
-
-
-	private NavMeshScript navMeshManager;
+	
+	[SerializeField] Animator exitDoorAnim;
+	[SerializeField] Transform secondFloorDoor;
+	private EnemyNavigationIA navMeshManager;
 	float currentTime;
 	bool isMousePressed => generator.isBeingClicked;
 	bool isRepaired;
@@ -28,7 +29,7 @@ public class GeneratorScript : MonoBehaviour
 		amountRepaired.maxValue = timeToRepair;
 		amountRepaired.minValue = 0;
 		generatorName = generatorNameText.text;
-		navMeshManager = FindObjectOfType<NavMeshScript>();
+		navMeshManager = FindObjectOfType<EnemyNavigationIA>();
 	}
 	private void Update()
 	{
@@ -42,6 +43,8 @@ public class GeneratorScript : MonoBehaviour
 			else if (amountRepaired.value >= amountRepaired.minValue)
 			{
 				print("Reparado");
+				exitDoorAnim.SetBool("Abierta", true);
+				secondFloorDoor.rotation = Quaternion.Euler(0, 0, -90f);
 				isRepaired = true;
 				navMeshManager.FinishGame();
 			}

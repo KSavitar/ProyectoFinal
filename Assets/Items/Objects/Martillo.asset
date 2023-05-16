@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7faa33f2668dafb41a7503151c271e02, type: 3}
   m_Name: Martillo
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 0f061b4bd0275bc4eb60f2af31e7375a, type: 3}
-  type: 2
-  action: 0
+  image: {fileID: 21300000, guid: a3df1190f24fc67479f5e1681063bf68, type: 3}
+  type: 4
   stackable: 0

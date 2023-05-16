@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7faa33f2668dafb41a7503151c271e02, type: 3}
   m_Name: TuboCruz
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 7e17f924e5261514fb163aea6c227e49, type: 3}
+  image: {fileID: 21300000, guid: e5d42d92271c9be4d8a505f00abc81c4, type: 3}
   type: 2
   stackable: 1

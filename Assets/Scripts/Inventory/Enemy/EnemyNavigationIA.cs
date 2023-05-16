@@ -17,7 +17,7 @@ public class EnemyNavigationIA : MonoBehaviour
 
 	int tempInt;
 
-	bool canMove = false;
+	public bool canMove = false;
 
 	GeneratorScript generator;
 	[SerializeField] Vector3 resetPlayerPos;
@@ -63,7 +63,7 @@ public class EnemyNavigationIA : MonoBehaviour
 				StartCoroutine(WaitToChangeDestination(10f));
 			}
 
-			if (goForPlayer && _meshAgent.remainingDistance <= .2f)
+			if (goForPlayer && _meshAgent.remainingDistance <= 1f)
 			{
 				Die();
 			}
@@ -75,7 +75,7 @@ public class EnemyNavigationIA : MonoBehaviour
 		canMove = false;
 		generator.amountRepaired.value = generator.amountRepaired.minValue;
 		transform.position = defPos;
-		player.position = resetPlayerPos;
+		//player.position = resetPlayerPos;
 		goForPlayer = false;
 		StopAllCoroutines();
 	}
@@ -105,6 +105,7 @@ public class EnemyNavigationIA : MonoBehaviour
 	public void FinishGame()
 	{
 		canMove = false;
+		Destroy(gameObject);
 		transform.position = defPos;
 	}
 }

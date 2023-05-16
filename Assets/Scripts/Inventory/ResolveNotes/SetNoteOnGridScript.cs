@@ -12,8 +12,14 @@ public class SetNoteOnGridScript : MonoBehaviour
 	[SerializeField] float speedRotation;
 	[SerializeField] float speedMove;
 
+	[SerializeField] GameObject canvas;
+	[SerializeField] GameObject canvasChild;
+
+	[SerializeField] bool isFinalBillboard;
+
 	private Quaternion cameraOnPlayerRotation;
 	private Vector3 cameraOnPlayerTransform;
+	public Renderer render;
 
 	bool rotate;
 	bool goToDefault;
@@ -33,7 +39,7 @@ public class SetNoteOnGridScript : MonoBehaviour
 			m_Camera.transform.position = Vector3.MoveTowards(m_Camera.transform.position, cameraPositionToGrid, speedMove * Time.deltaTime);
 		}
 
-		if (Input.GetKeyDown(KeyCode.Y))
+		if (Input.GetKeyDown(KeyCode.Y) && rotate && !goToDefault)
 		{
 			rotate = false;
 			goToDefault = true;
@@ -42,29 +48,37 @@ public class SetNoteOnGridScript : MonoBehaviour
 		if (goToDefault)
 		{
 			m_Camera.transform.rotation = Quaternion.RotateTowards(m_Camera.transform.rotation, cameraOnPlayerRotation, Time.deltaTime * speedRotation);
-			m_Camera.transform.position = Vector3.MoveTowards(m_Camera.transform.position, cameraOnPlayerTransform, speedMove * Time.deltaTime);
-
-			if (Vector3.Distance(m_Camera.transform.position, cameraOnPlayerTransform) <= 0.0001f)
+			//m_Camera.transform.position = Vector3.MoveTowards(m_Camera.transform.position, cameraOnPlayerTransform, speedMove * Time.deltaTime);
+			m_Camera.transform.localPosition = Vector3.MoveTowards(new Vector3(0.05f, 4.49f, 0.26f), cameraOnPlayerTransform, speedMove * Time.deltaTime);
+			if (Vector3.Distance(m_Camera.transform.localPosition, cameraOnPlayerTransform) <= 0.0001f)
 			{
 				print("GGGGG");
 				goToDefault = false;
 				m_Camera.transform.rotation = cameraOnPlayerRotation;
+				render.enabled = true;
 				m_Camera.GetComponentInParent<PlayerController>().enabled = true;
-				m_Camera.GetComponent<Camara>().enabled = true;
+				m_Camera.GetComponent<Camara>().values.canMove = true;
+				canvas.SetActive(true);
 			}
 		}
 	}
 
-	private void OnMouseDown()
+	public void StartAll()
 	{
 		if (!rotate)
 		{
+			canvas.SetActive(false);
 			rotate = true;
 			print("Hey");
-			m_Camera.GetComponent<Camara>().enabled = false;
+			render.enabled = false;
+			m_Camera.GetComponent<Camara>().values.canMove = false;
 			m_Camera.GetComponentInParent<PlayerController>().enabled = false;
 			cameraOnPlayerRotation = m_Camera.transform.rotation;
-			cameraOnPlayerTransform = m_Camera.transform.position;
+			cameraOnPlayerTransform = m_Camera.transform.localPosition;
+			if (isFinalBillboard)
+			{
+				canvasChild.SetActive(true);
+			}
 		}
 	}
 }

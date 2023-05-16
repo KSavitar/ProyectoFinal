@@ -11,10 +11,12 @@ public class FnafDoorsScript : MonoBehaviour
 
 	private void Awake()
 	{
+		anim = GetComponentInParent<Animator>();
 	}
 
 
 	private void Update()
 	{
+		anim.SetBool("Open", isOpen);
 	}
 }

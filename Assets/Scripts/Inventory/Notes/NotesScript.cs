@@ -8,6 +8,4 @@ public class NotesScript
 	public string title;
 	/// <summary> Contenido de las notas</summary>
 	public string content;
-
-
 }

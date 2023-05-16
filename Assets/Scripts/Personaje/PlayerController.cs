@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
 	public Rigidbody rb;
+	public Animator animator;
 	private Vector3 moveDir;
 	public float speed = 12, speedRotation, jumpForce, gravity;
 
@@ -21,6 +23,8 @@ public class PlayerController : MonoBehaviour
 
 	public ValoresOpciones values;
 
+	[SerializeField] GameObject panelGenerador;
+	[SerializeField] GameObject sliderGenerador;
 
 	
 
@@ -48,14 +52,15 @@ public class PlayerController : MonoBehaviour
 			moveDir = transform.TransformDirection(moveDir);
 
 			if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-            {
+			{
 				caminar.enabled = true;
-
+				animator.SetBool("Move", true);
 			}
 			else
-            {
+			{
 				caminar.enabled =false;
-            }
+				animator.SetBool("Move", false);
+			}
 
 
 
@@ -100,12 +105,20 @@ public class PlayerController : MonoBehaviour
 		transform.rotation = Quaternion.Euler(0, lastRot, 0);
 	}
 
-	/*private void OnTriggerEnter(Collider other)
+	private void OnTriggerEnter(Collider other)
 	{
 		if (other.name == "FNAFTrigger")
 		{
 			FindObjectOfType<EnemyNavigationIA>().canMove = true;
-			Destroy(other.gameObject);
+			panelGenerador.SetActive(true);
 		}
-	}*/
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.name == "FNAFTrigger" && sliderGenerador.GetComponent<Slider>().value == sliderGenerador.GetComponent<Slider>().maxValue)
+		{
+			panelGenerador.SetActive(false);
+		}
+	}
 }

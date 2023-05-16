@@ -21,6 +21,13 @@ public enum ItemType                //Ejemplos
     TuberiaCurva,
     TuberiaCruz,
     Llave,
-    Martillo
+    Martillo,
+    Ladrillo,
+    Manivela,
+    Medallon1,
+    Medallon2,
+    Medallon3,
+    PiezaMaquina,
+    Palanca
 }
 
