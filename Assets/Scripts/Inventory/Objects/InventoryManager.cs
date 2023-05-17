@@ -96,23 +96,17 @@ public class InventoryManager : MonoBehaviour
 
 	public void RemoveItemInSlot(ItemType itemType)
 	{
-		/*InventoryItemsScript itemInSlot = parentSlot.GetComponentInChildren<InventoryItemsScript>();*/
-		/*itemInSlot.amount--;
-		itemInSlot.RefreshCount();*/
-		print("Tipo: " + itemType);
 		for (int i = 0; i < inventorySlots.Length; i++)
 		{
 			InventorySlot slot = inventorySlots[i];
 			InventoryItemsScript itemInSlot = slot.GetComponentInChildren<InventoryItemsScript>();
 			if (itemInSlot != null)
 			{
-				print("Tipo slot: " + itemInSlot.item.type);
 			}
 
 
 			if (itemInSlot != null && itemInSlot.item.type == itemType)
 			{
-				print("Borrado");
 				itemInSlot.amount--;
 				itemInSlot.RefreshCount();
 				break;

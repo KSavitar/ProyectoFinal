@@ -35,16 +35,14 @@ public class GeneratorScript : MonoBehaviour
 	{
 		if (isMousePressed && !isRepaired)
 		{
-			print("Reparando");
 			if (amountRepaired.value < amountRepaired.maxValue)
 			{
 				amountRepaired.value += Time.deltaTime;
 			}
 			else if (amountRepaired.value >= amountRepaired.minValue)
 			{
-				print("Reparado");
 				exitDoorAnim.SetBool("Abierta", true);
-				secondFloorDoor.rotation = Quaternion.Euler(0, 0, -90f);
+				secondFloorDoor.rotation = Quaternion.Euler(-90, 0, -90f);
 				isRepaired = true;
 				navMeshManager.FinishGame();
 			}

@@ -13,7 +13,6 @@ public class LeverScript : MonoBehaviour
 	public void OnMouseDown()
 	{
 		door.SetActive(false);
-		print("ISPRESSED");
 		isMousePressed = true;
 	}
 	private void OnMouseUpAsButton()
@@ -24,7 +23,6 @@ public class LeverScript : MonoBehaviour
 
 	private void OnMouseExit()
 	{
-		print("Has exited");
 		if (isMousePressed)
 		{
 			door.SetActive(true);

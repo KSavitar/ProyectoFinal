@@ -15,7 +15,5 @@ public class DemoScript : MonoBehaviour
 	public void PickupItem(int id)
 	{
 		bool canAdd = inventoryManager.AddItem(itemsToPickup[id]); //Comprobar si se puede añadir
-		if (canAdd) print("Item is Added");
-		else if (!canAdd) print("Inventory is full");
 	}
 }

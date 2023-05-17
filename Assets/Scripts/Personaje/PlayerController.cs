@@ -109,7 +109,10 @@ public class PlayerController : MonoBehaviour
 	{
 		if (other.name == "FNAFTrigger")
 		{
-			FindObjectOfType<EnemyNavigationIA>().canMove = true;
+			if (FindObjectOfType<EnemyNavigationIA>() != null)
+			{
+				FindObjectOfType<EnemyNavigationIA>().canMove = true;
+			}
 			panelGenerador.SetActive(true);
 		}
 	}

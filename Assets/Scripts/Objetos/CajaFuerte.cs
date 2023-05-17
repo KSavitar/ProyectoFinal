@@ -44,19 +44,14 @@ public class CajaFuerte : MonoBehaviour
 
         if (other.CompareTag("A"))
         {
-            print(codigo.a);
             codigo.a = 9;
         }
         if (other.CompareTag("B"))
         {
-            print(codigo.b);
-
             codigo.b = 5;
         }
         if (other.CompareTag("C"))
         {
-            print(codigo.c);
-
             codigo.c = 8;
         }
 

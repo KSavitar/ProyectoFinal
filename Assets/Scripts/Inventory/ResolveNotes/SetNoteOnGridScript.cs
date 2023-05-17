@@ -17,6 +17,8 @@ public class SetNoteOnGridScript : MonoBehaviour
 
 	[SerializeField] bool isFinalBillboard;
 
+	[SerializeField] GameObject[] cerrojos;
+
 	private Quaternion cameraOnPlayerRotation;
 	private Vector3 cameraOnPlayerTransform;
 	public Renderer render;
@@ -39,7 +41,7 @@ public class SetNoteOnGridScript : MonoBehaviour
 			m_Camera.transform.position = Vector3.MoveTowards(m_Camera.transform.position, cameraPositionToGrid, speedMove * Time.deltaTime);
 		}
 
-		if (Input.GetKeyDown(KeyCode.Y) && rotate && !goToDefault)
+		if (Input.GetKeyDown(KeyCode.Escape) && rotate && !goToDefault)
 		{
 			rotate = false;
 			goToDefault = true;
@@ -52,13 +54,19 @@ public class SetNoteOnGridScript : MonoBehaviour
 			m_Camera.transform.localPosition = Vector3.MoveTowards(new Vector3(0.05f, 4.49f, 0.26f), cameraOnPlayerTransform, speedMove * Time.deltaTime);
 			if (Vector3.Distance(m_Camera.transform.localPosition, cameraOnPlayerTransform) <= 0.0001f)
 			{
-				print("GGGGG");
 				goToDefault = false;
 				m_Camera.transform.rotation = cameraOnPlayerRotation;
 				render.enabled = true;
 				m_Camera.GetComponentInParent<PlayerController>().enabled = true;
 				m_Camera.GetComponent<Camara>().values.canMove = true;
 				canvas.SetActive(true);
+				if (!isFinalBillboard)
+				{
+					for (int i = 0; i < cerrojos.Length; i++)
+					{
+						cerrojos[i].GetComponent<CerrojoScript>().isFocused = false;
+					}
+				}
 			}
 		}
 	}
@@ -69,7 +77,6 @@ public class SetNoteOnGridScript : MonoBehaviour
 		{
 			canvas.SetActive(false);
 			rotate = true;
-			print("Hey");
 			render.enabled = false;
 			m_Camera.GetComponent<Camara>().values.canMove = false;
 			m_Camera.GetComponentInParent<PlayerController>().enabled = false;
@@ -78,6 +85,13 @@ public class SetNoteOnGridScript : MonoBehaviour
 			if (isFinalBillboard)
 			{
 				canvasChild.SetActive(true);
+			}
+			else if (!isFinalBillboard)
+			{
+				for (int i = 0; i < cerrojos.Length; i++)
+				{
+					cerrojos[i].GetComponent<CerrojoScript>().isFocused = true;
+				}
 			}
 		}
 	}

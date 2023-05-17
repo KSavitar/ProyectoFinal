@@ -26,7 +26,6 @@ public class DetectectarSueloFinal : MonoBehaviour
         {
             panel.SetActive(true);
             GetComponent<DialoguesScript>().DisplayDialogue(DialogoFinal);
-            print("fssf");
             si = true;
         }
     }

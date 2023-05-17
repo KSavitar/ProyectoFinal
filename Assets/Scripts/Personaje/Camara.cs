@@ -111,6 +111,7 @@ public class Camara : MonoBehaviour
 					else if (candado == false)
 					{
 						puertaAnim.SetBool("Abierta", true);
+						candado = true;
 					}
 				}
 			}
@@ -176,7 +177,6 @@ public class Camara : MonoBehaviour
 					{
 						PTCruz1.SetActive(false);
 						audios.PlayOneShot(Tuberia);
-						print(hit.collider.transform.rotation);
 						Instantiate(tuboCruzPrefab, hit.transform.position, new Quaternion(-0.70711f,0,0,0.70711f));
 						tuboCruz -= 1;
 						tubosColocados += 1;
@@ -194,7 +194,6 @@ public class Camara : MonoBehaviour
 						PTCruz2.SetActive(false);
 
 						audios.PlayOneShot(Tuberia);
-						print(hit.collider.transform.rotation);
 						Instantiate(tuboCruzPrefab, hit.transform.position, new Quaternion(-0.70711f, 0, 0, 0.70711f));
 						tuboCruz -= 1;
 						tubosColocados += 1;
@@ -442,7 +441,7 @@ public class Camara : MonoBehaviour
 			{
 				if (Input.GetKeyDown(KeyCode.E))
 				{
-					if (candado == true && llave == true)
+					if (llave == true)
 					{
 						candado = false;
 						llave = false;
@@ -451,6 +450,7 @@ public class Camara : MonoBehaviour
 					else if (candado == false)
 					{
 						puerta4Anim.SetBool("Abierta", true);
+						candado = true;
 					}
 				}
 			}
@@ -474,11 +474,26 @@ public class Camara : MonoBehaviour
 				if (Input.GetKey(KeyCode.E) && palanca)
 				{
 					tempObject = hit.collider.gameObject;
-					hit.collider.gameObject.GetComponent<FnafDoorsScript>().isOpen = false;
+					if (hit.collider.gameObject.GetComponent<FnafDoorsScript>() != null)
+					{
+						hit.collider.gameObject.GetComponent<FnafDoorsScript>().isOpen = false;
+					}
+					else
+					{
+						hit.collider.gameObject.GetComponent<FnafDoorsParentReference>().parent.GetComponent<FnafDoorsScript>().isOpen = false;
+					}
+					
 				}
 				else
 				{
-					hit.collider.gameObject.GetComponent<FnafDoorsScript>().isOpen = true;
+					if (hit.collider.gameObject.GetComponent<FnafDoorsScript>() != null)
+					{
+						hit.collider.gameObject.GetComponent<FnafDoorsScript>().isOpen = true;
+					}
+					else
+					{
+						hit.collider.gameObject.GetComponent<FnafDoorsParentReference>().parent.GetComponent<FnafDoorsScript>().isOpen = true;
+					}
 				}
 			}
 			else if (hit.collider.tag == "Generador")

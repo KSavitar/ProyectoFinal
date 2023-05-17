@@ -20,7 +20,6 @@ public class RotatePipes : MonoBehaviour
     public void RotarObjeto()
     {
         transform.Rotate(0, grados, 0);
-        print(gameObject.transform.rotation);
 
     }
 

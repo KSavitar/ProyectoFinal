@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EnemyNavigationIA : MonoBehaviour
 {
@@ -40,10 +41,6 @@ public class EnemyNavigationIA : MonoBehaviour
 	{
 		if (canMove)
 		{
-			/*if (currentPosition != 0)
-			{
-				print(currentPosition + " + " + doors[currentPosition - 1].name);
-			}*/
 			if (currentPosition != 0 && _meshAgent.remainingDistance <= 2f)
 			{
 				
@@ -51,7 +48,6 @@ public class EnemyNavigationIA : MonoBehaviour
 				{
 					_meshAgent.destination = player.position;
 					goForPlayer = true;
-					print("Muere");
 				}
 				else
 				{
@@ -63,7 +59,7 @@ public class EnemyNavigationIA : MonoBehaviour
 				StartCoroutine(WaitToChangeDestination(10f));
 			}
 
-			if (goForPlayer && _meshAgent.remainingDistance <= 1f)
+			if (goForPlayer && _meshAgent.remainingDistance <= 1.25f)
 			{
 				Die();
 			}
@@ -72,17 +68,12 @@ public class EnemyNavigationIA : MonoBehaviour
 
 	private void Die()
 	{
-		canMove = false;
-		generator.amountRepaired.value = generator.amountRepaired.minValue;
-		transform.position = defPos;
-		//player.position = resetPlayerPos;
-		goForPlayer = false;
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		StopAllCoroutines();
 	}
 
 	public void ChangeDestination()
 	{
-		print("SpawnPoint");
 		if (currentPosition == 0)
 		{
 			_meshAgent.destination = targetLocations[currentPosition = Random.Range(1, targetLocations.Length)];

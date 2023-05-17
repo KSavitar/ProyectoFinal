@@ -62,6 +62,5 @@ public class InventoryItemsScript : MonoBehaviour, IBeginDragHandler, IDragHandl
 		{
 			Destroy(gameObject);
 		}
-		print(amount);
 	}
 }

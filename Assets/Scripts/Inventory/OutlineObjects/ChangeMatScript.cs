@@ -16,12 +16,10 @@ public class ChangeMatScript : MonoBehaviour
 	{
 		meshRenderer = GetComponent<Renderer>();
 		_defaultMat = meshRenderer.materials[0];
-		print(_defaultMat);
 	}
 
 	public void OnMouseOver()
 	{
-		print("Overed");
 		meshRenderer.material = outlineMat;
 	}
 

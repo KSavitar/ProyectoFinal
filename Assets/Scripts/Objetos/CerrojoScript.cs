@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class CerrojoScript : MonoBehaviour
 {
+	public bool isFocused;
 	private void OnMouseDown()
 	{
-		GetComponent<CajaFuerte>().enabled = true;
+		if (isFocused)
+		{
+			GetComponent<CajaFuerte>().enabled = true;
+		}
 	}
 
 	private void OnMouseUp()

@@ -34,20 +34,7 @@ public class AddNoteToBoard : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 		RectTransformUtility.ScreenPointToLocalPointInRectangle(parentCanvasOfImageToMove.transform as RectTransform, Input.mousePosition, parentCanvasOfImageToMove.worldCamera, out pos);
 		image.transform.position = parentCanvasOfImageToMove.transform.TransformPoint(pos);
 		
-		/*if (Input.mousePosition.x >= minX + xOffset && Input.mousePosition.x <= maxX - xOffset
-			&& Input.mousePosition.y >= minY + yOffset && Input.mousePosition.y <= maxY - yOffset)
-		{
-			print("SESOOE");
-			image.transform.position = Vector3.Lerp(image.transform.position, parentCanvasOfImageToMove.transform.TransformPoint(pos), Time.deltaTime * speed);
-		}*/
 
-	}
-	public void Update()
-	{
-		if (Input.GetMouseButton(0))
-		{
-			//print(Input.mousePosition);
-		}
 	}
 	public void OnEndDrag(PointerEventData eventData)
 	{

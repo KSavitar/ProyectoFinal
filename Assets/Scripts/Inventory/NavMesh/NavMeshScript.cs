@@ -38,13 +38,8 @@ public class NavMeshScript : MonoBehaviour
 		if (canMove)
 		{
 			_meshAgent.destination = targetDestination.position;
-			print("locacion: " + currentPosition);
 			if (_meshAgent.remainingDistance <= 0.02f)
 			{
-				if (currentPosition != 0)
-				{
-					print("Puerta" + doors[tempInt - 1].name);
-				}
 				if (currentPosition != 0)
 				{
 					if (doors[tempInt - 1].GetComponent<FnafDoorsScript>().isOpen)
